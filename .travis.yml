@@ -1,0 +1,16 @@
+language: ruby
+  rvm:
+  - 2.3.1 --binary flag
+
+cache:
+  bundler: true
+
+sudo: false
+
+script: bundle exec rspec
+
+before_install: 
+  - gem install bundler -v 1.12.5
+  - gem update --system
+  - gem --version
+ 
