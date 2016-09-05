@@ -3,5 +3,3 @@ rvm:
   - 2.3.1
 services:
   -mysql
-before_script:
-  - mysql -e 'create database vota_prato_test;'
