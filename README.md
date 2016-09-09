@@ -6,24 +6,15 @@ Things you may want to cover:
 
 ## System dependencies
 	
-	* Ruby version :	
-	
+	Ruby version :	
 		2.3.1
-
-	* Bundler version : 
-		
+	Bundle version : 
 		1.12.5
-	
-	* Rails :
-
+	Rails :
 		4.2.4
-
-	* rvm :
-
+	rvm :
 		1.27.0
-
-	* gem :
-
+	gem :
 		2.6.6	
 
 * Configuration
