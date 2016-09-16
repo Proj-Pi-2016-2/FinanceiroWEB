@@ -6,4 +6,4 @@ services:
 before_install: 
    - gem install mysql2 -v='0.3.18'
    - gem install sass-rails -v='5.0.6'
-   - bundle update
+   - mysql -e 'create database financeiro_test;'
