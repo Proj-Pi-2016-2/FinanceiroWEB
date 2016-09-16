@@ -136,3 +136,118 @@ Gem::LoadError (Specified 'mysql2' for database adapter, but the gem is not load
   Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
   Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
   Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (36.5ms)
+  [1m[36m (66.5ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (166.9ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateSocios (20160915102033)
+  [1m[35m (51.4ms)[0m  CREATE TABLE `socios` (`id` int(11) auto_increment PRIMARY KEY, `cpf` int(11) NOT NULL, `nome` varchar(200), `email` varchar(70), `telefone` int(11), `endereco` varchar(250), `data_nascimento` date, `sexo` varchar(1), `cadeira` int(11), `senha` varchar(50), `permissao` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160915102033')
+  [1m[36m (27.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCadeiras (20160915102706)
+  [1m[35m (0.4ms)[0m  CREATE UNIQUE INDEX `index_cadeiras_on_cadeira`  ON `cadeiras` (`cadeira`) 
+Mysql2::Error: Table 'financeiro_development.cadeiras' doesn't exist: CREATE UNIQUE INDEX `index_cadeiras_on_cadeira`  ON `cadeiras` (`cadeira`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateCadeiras (20160915102706)
+  [1m[35m (62.5ms)[0m  CREATE TABLE `cadeiras` (`id` int(11) auto_increment PRIMARY KEY, `cadeira` int(11) NOT NULL, `data_posse` date, `data_saida` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160915102706')
+  [1m[36m (29.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCadeiraSocios (20160915102722)
+  [1m[35m (66.3ms)[0m  CREATE TABLE `cadeira_socios` (`id` int(11) auto_increment PRIMARY KEY, `cpf` int(11), `cadeira` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160915102722')
+  [1m[36m (31.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCaixas (20160915102731)
+  [1m[35m (66.2ms)[0m  CREATE TABLE `caixas` (`id` int(11) auto_increment PRIMARY KEY, `id_caixa` int(11) NOT NULL, `data_caixa` date, `saldo` float, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160915102731')
+  [1m[36m (31.8ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMensalidades (20160915102739)
+  [1m[35m (77.2ms)[0m  CREATE TABLE `mensalidades` (`id` int(11) auto_increment PRIMARY KEY, `id_entrada` int(11) NOT NULL, `data_entrada` date, `justifica_entrada` varchar(200), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160915102739')
+  [1m[36m (42.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTransacaoEntradas (20160915103945)
+  [1m[35m (77.2ms)[0m  CREATE TABLE `transacao_entradas` (`id` int(11) auto_increment PRIMARY KEY, `id_entrada` int(11) NOT NULL, `valor` float, `data_entrada` date, `justifica_entrada` varchar(200), `tipo` varchar(1), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160915103945')
+  [1m[36m (42.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTransacaoSaidas (20160915103951)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateTransacaoSaidas (20160915103951)
+  [1m[35m (64.6ms)[0m  CREATE TABLE `transacao_saidas` (`id` int(11) auto_increment PRIMARY KEY, `id_saida` int(11) NOT NULL, `data_saida` date, `valor` float, `justifica_saida` varchar(200), `img_comprov` blob(10485760), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160915103951')
+  [1m[36m (30.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'cadeira_socios'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `cadeira_socios`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'cadeiras'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `cadeiras`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'caixas'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `caixas`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'mensalidades'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `mensalidades`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'socios'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `socios`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'transacao_entradas'
+[0m
+  [1m[35m (0.3ms)[0m  SHOW CREATE TABLE `transacao_entradas`
+  [1m[36m (0.6ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'transacao_saidas'
+[0m
+  [1m[35m (0.3ms)[0m  SHOW CREATE TABLE `transacao_saidas`
