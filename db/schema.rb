@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160915103951) do
+ActiveRecord::Schema.define(version: 20160928200918) do
 
   create_table "cadeira_socios", force: :cascade do |t|
     t.integer  "cpf",        limit: 4
@@ -45,18 +45,18 @@ ActiveRecord::Schema.define(version: 20160915103951) do
   end
 
   create_table "socios", force: :cascade do |t|
-    t.integer  "cpf",             limit: 4,   null: false
-    t.string   "nome",            limit: 200
-    t.string   "email",           limit: 70
-    t.integer  "telefone",        limit: 4
-    t.string   "endereco",        limit: 250
-    t.date     "data_nascimento"
-    t.string   "sexo",            limit: 1
-    t.integer  "cadeira",         limit: 4
-    t.string   "senha",           limit: 50
-    t.integer  "permissao",       limit: 4
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.string   "nome",           limit: 255
+    t.integer  "cpf",            limit: 4
+    t.string   "email",          limit: 255
+    t.integer  "telefone",       limit: 4
+    t.string   "endereco",       limit: 255
+    t.date     "dataNascimento"
+    t.string   "sexo",           limit: 255
+    t.integer  "cadeira",        limit: 4
+    t.string   "senha",          limit: 255
+    t.integer  "permissao",      limit: 4
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "transacao_entradas", force: :cascade do |t|

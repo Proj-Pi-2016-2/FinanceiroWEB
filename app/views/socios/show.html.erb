@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @socio.nome %>
+</p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @socio.cpf %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @socio.email %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @socio.telefone %>
+</p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @socio.endereco %>
+</p>
+
+<p>
+  <strong>Datanascimento:</strong>
+  <%= @socio.dataNascimento %>
+</p>
+
+<p>
+  <strong>Sexo:</strong>
+  <%= @socio.sexo %>
+</p>
+
+<p>
+  <strong>Cadeira:</strong>
+  <%= @socio.cadeira %>
+</p>
+
+<p>
+  <strong>Senha:</strong>
+  <%= @socio.senha %>
+</p>
+
+<p>
+  <strong>Permissao:</strong>
+  <%= @socio.permissao %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @socio.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @socio.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_socio_path(@socio) %> |
+<%= link_to 'Back', socios_path %>

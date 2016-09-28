@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :socios
+  resources :socios
   get 'home/index'
   root 'home#index'
 
