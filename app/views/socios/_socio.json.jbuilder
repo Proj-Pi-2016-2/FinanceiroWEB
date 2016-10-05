@@ -1,2 +1,0 @@
-json.extract! socio, :id, :nome, :cpf, :email, :telefone, :endereco, :dataNascimento, :sexo, :cadeira, :senha, :permissao, :created_at, :updated_at, :created_at, :updated_at
-json.url socio_url(socio, format: :json)
