@@ -49,7 +49,8 @@
   </div>
   <div class="field">
     <%= f.label :permissão %><br>
-    <%= f.select :permissao, options_for_select(['Socio','Diretor','Tesoureiro'], :selected => params[:permissao]), {}, { :class => 'span3 controls controls-row' } %>
+    <%= f.text_field :permissao %>
+    <%#= f.select :permissao, options_for_select(['Socio','Diretor','Tesoureiro'], :selected => params[:permissao]), {}, { :class => 'span3 controls controls-row' } %>
   </div>
   <div class="field">
     <%= f.label :criado_em %><br>
