@@ -37,7 +37,7 @@
   </div>
   <div class="field">
     <%= f.label :sexo %><br>
-    <%= f.text_field :sexo %>
+    <%= f.select :sexo, ['Masculino', 'Feminino', 'Outro']%>
   </div>
   <div class="field">
     <%= f.label :cadeira %><br>
@@ -49,7 +49,7 @@
   </div>
   <div class="field">
     <%= f.label :permissão %><br>
-    <%= f.number_field :permissao %>
+    <%= f.select :permissao, options_for_select(['Socio','Diretor','Tesoureiro'], :selected => params[:permissao]), {}, { :class => 'span3 controls controls-row' } %>
   </div>
   <div class="field">
     <%= f.label :criado_em %><br>
