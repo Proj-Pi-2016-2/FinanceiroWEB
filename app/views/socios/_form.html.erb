@@ -32,7 +32,7 @@
     <%= f.text_field :endereco %>
   </div>
   <div class="field">
-    <%= f.label :data_de_nascimento %><br>
+    <%= f.label :data_de_nascimento, start_year: 1900%><br>
     <%= f.date_select :dataNascimento %>
   </div>
   <div class="field">
@@ -54,11 +54,11 @@
   </div>
   <div class="field">
     <%= f.label :criado_em %><br>
-    <%= f.datetime_select :created_at %>
+    <%= f.datetime_select :created_at, start_year: 2016 %>
   </div>
   <div class="field">
     <%= f.label :modificado_em %><br>
-    <%= f.datetime_select :updated_at %>
+    <%= f.datetime_select :updated_at, start_year: 2016%>
   </div>
   <div class="actions">
     <%= f.submit %>
