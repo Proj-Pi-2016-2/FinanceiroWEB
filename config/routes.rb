@@ -6,13 +6,13 @@ Rails.application.routes.draw do
   resources :transacao_entradas
 
   resources :socios
+  resources :sessions
   get 'home/index'
 
-  resources :login
-  get    'login'   => 'login#new'
-  post   'login'   => 'login#create'
-  delete 'logout'  => 'login#destroy'
-  root 'login#new'
+
+  get 'login', to: 'sessions#new', as: 'login'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
