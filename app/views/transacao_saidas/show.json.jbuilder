@@ -1,0 +1,1 @@
+json.partial! "transacao_saidas/transacao_saida", transacao_saida: @transacao_saida

@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< Updated upstream
 ActiveRecord::Schema.define(version: 20161102224351) do
+=======
+ActiveRecord::Schema.define(version: 20161101234553) do
+>>>>>>> Stashed changes
 
   create_table "cadeira_socios", force: :cascade do |t|
     t.integer  "cpf",        limit: 8
@@ -60,23 +64,23 @@ ActiveRecord::Schema.define(version: 20161102224351) do
   end
 
   create_table "transacao_entradas", force: :cascade do |t|
-    t.integer  "id_entrada",        limit: 4,   null: false
+    t.integer  "id_entrada",        limit: 4
     t.float    "valor",             limit: 24
     t.date     "data_entrada"
-    t.string   "justifica_entrada", limit: 200
-    t.string   "tipo",              limit: 1
+    t.string   "justifica_entrada", limit: 255
+    t.string   "tipo",              limit: 255
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
   end
 
   create_table "transacao_saidas", force: :cascade do |t|
-    t.integer  "id_saida",        limit: 4,        null: false
-    t.date     "data_saida"
+    t.integer  "id_saida",        limit: 4
     t.float    "valor",           limit: 24
-    t.string   "justifica_saida", limit: 200
-    t.binary   "img_comprov",     limit: 16777215
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.date     "data_saida"
+    t.string   "justifica_saida", limit: 255
+    t.binary   "img_comprov",     limit: 65535
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
   end
 
 end

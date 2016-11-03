@@ -1,0 +1,2 @@
+module TransacaoSaidasHelper
+end

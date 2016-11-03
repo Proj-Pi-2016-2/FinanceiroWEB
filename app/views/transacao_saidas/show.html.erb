@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id saida:</strong>
+  <%= @transacao_saida.id_saida %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @transacao_saida.valor %>
+</p>
+
+<p>
+  <strong>Data saida:</strong>
+  <%= @transacao_saida.data_saida %>
+</p>
+
+<p>
+  <strong>Justifica saida:</strong>
+  <%= @transacao_saida.justifica_saida %>
+</p>
+
+<p>
+  <strong>Img comprov:</strong>
+  <%= image_tag @transacao_saida.img_comprov.url %>
+  <%= image_tag @transacao_saida.img_comprov.url(:medium) %>
+  <%= image_tag @transacao_saida.img_comprov.url(:thumb) %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @transacao_saida.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @transacao_saida.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_transacao_saida_path(@transacao_saida) %> |
+<%= link_to 'Back', transacao_saidas_path %>

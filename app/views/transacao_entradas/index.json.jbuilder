@@ -1,0 +1,1 @@
+json.array! @transacao_entradas, partial: 'transacao_entradas/transacao_entrada', as: :transacao_entrada

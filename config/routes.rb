@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  resources :transacao_saidas
+  resources :transacao_saidas
+  
+  resources :transacao_entradas
+
   resources :socios
   get 'home/index'
 

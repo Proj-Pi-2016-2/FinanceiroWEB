@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id entrada:</strong>
+  <%= @transacao_entrada.id_entrada %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @transacao_entrada.valor %>
+</p>
+
+<p>
+  <strong>Data entrada:</strong>
+  <%= @transacao_entrada.data_entrada %>
+</p>
+
+<p>
+  <strong>Justifica entrada:</strong>
+  <%= @transacao_entrada.justifica_entrada %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @transacao_entrada.tipo %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @transacao_entrada.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @transacao_entrada.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_transacao_entrada_path(@transacao_entrada) %> |
+<%= link_to 'Back', transacao_entradas_path %>

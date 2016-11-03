@@ -1,0 +1,2 @@
+json.extract! transacao_saida, :id, :id_saida, :valor, :data_saida, :justifica_saida, :img_comprov, :created_at, :updated_at, :created_at, :updated_at
+json.url transacao_saida_url(transacao_saida, format: :json)
