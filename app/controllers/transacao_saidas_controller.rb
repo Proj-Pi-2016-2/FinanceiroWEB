@@ -28,7 +28,7 @@ class TransacaoSaidasController < ApplicationController
 
     respond_to do |format|
       if @transacao_saida.save
-        format.html { redirect_to @transacao_saida, notice: 'Transacao saida was successfully created.' }
+        format.html { redirect_to @transacao_saida, notice: 'Transação de saida criada com sucesso.' }
         format.json { render :show, status: :created, location: @transacao_saida }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class TransacaoSaidasController < ApplicationController
   def update
     respond_to do |format|
       if @transacao_saida.update(transacao_saida_params)
-        format.html { redirect_to @transacao_saida, notice: 'Transacao saida was successfully updated.' }
+        format.html { redirect_to @transacao_saida, notice: 'Transação de saida modificada com sucesso.' }
         format.json { render :show, status: :ok, location: @transacao_saida }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class TransacaoSaidasController < ApplicationController
   def destroy
     @transacao_saida.destroy
     respond_to do |format|
-      format.html { redirect_to transacao_saidas_url, notice: 'Transacao saida was successfully destroyed.' }
+      format.html { redirect_to transacao_saidas_url, notice: 'Transacao de saida deletada com cucesso.' }
       format.json { head :no_content }
     end
   end
@@ -65,7 +65,7 @@ class TransacaoSaidasController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_transacao_saida
       @transacao_saida = TransacaoSaida.find(params[:id])
-    end 
+    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def transacao_saida_params

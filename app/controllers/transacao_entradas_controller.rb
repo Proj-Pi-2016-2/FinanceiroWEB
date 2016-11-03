@@ -28,7 +28,7 @@ class TransacaoEntradasController < ApplicationController
 
     respond_to do |format|
       if @transacao_entrada.save
-        format.html { redirect_to @transacao_entrada, notice: 'Transacao entrada was successfully created.' }
+        format.html { redirect_to @transacao_entrada, notice: 'Transacao de entrada criada com sucesso.' }
         format.json { render :show, status: :created, location: @transacao_entrada }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class TransacaoEntradasController < ApplicationController
   def update
     respond_to do |format|
       if @transacao_entrada.update(transacao_entrada_params)
-        format.html { redirect_to @transacao_entrada, notice: 'Transacao entrada was successfully updated.' }
+        format.html { redirect_to @transacao_entrada, notice: 'Transacao de entrada modifacada com sucesso.' }
         format.json { render :show, status: :ok, location: @transacao_entrada }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class TransacaoEntradasController < ApplicationController
   def destroy
     @transacao_entrada.destroy
     respond_to do |format|
-      format.html { redirect_to transacao_entradas_url, notice: 'Transacao entrada was successfully destroyed.' }
+      format.html { redirect_to transacao_entradas_url, notice: 'Transacao entrada deletada com sucesso.' }
       format.json { head :no_content }
     end
   end

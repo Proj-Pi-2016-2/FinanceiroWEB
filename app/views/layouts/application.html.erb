@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Financeiro" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "FinanceiroWeb" %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag "application", :media => "all" %>
@@ -52,7 +52,7 @@
             <li><%= link_to "Lançamentos", "/transacao_entradas/new"  %></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/"><span class="glyphicon glyphicon-user"></span> Logout</a></li>
+            <li><a href="/"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Logout</a></li>
           </ul>
         </div>
       </div>
@@ -65,7 +65,7 @@
           <%= yield %>
         </div>
         <div class="col-lg-3">
-          <!--<div class="well sidebar-nav">
+          <!--div class="well sidebar-nav">
             <h3>Sidebar</h3>
             <ul class="nav nav-list">
               <li class="nav-header">Sidebar</li>
@@ -73,12 +73,12 @@
               <li><%= link_to "Link2", "/path2"  %></li>
               <li><%= link_to "Link3", "/path3"  %></li>
             </ul>
-          </div><!--/.well -->
+          </div></.well -->
         </div><!--/span-->
       </div><!--/row-->
 
       <footer>
-        <p>&copy; Company 2016</p>
+        <p>&copy; FinanceiroWeb 2016</p>
       </footer>
 
     </div> <!-- /container -->
