@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< Updated upstream
 ActiveRecord::Schema.define(version: 20161102224351) do
-=======
-ActiveRecord::Schema.define(version: 20161101234553) do
->>>>>>> Stashed changes
 
   create_table "cadeira_socios", force: :cascade do |t|
     t.integer  "cpf",        limit: 8
@@ -52,7 +48,7 @@ ActiveRecord::Schema.define(version: 20161101234553) do
     t.string   "nome",           limit: 255
     t.integer  "cpf",            limit: 8
     t.string   "email",          limit: 255
-    t.integer  "telefone",       limit: 4
+    t.integer  "telefone",       limit: 8
     t.string   "endereco",       limit: 255
     t.date     "dataNascimento"
     t.string   "sexo",           limit: 255

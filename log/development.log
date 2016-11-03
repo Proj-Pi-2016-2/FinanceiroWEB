@@ -36300,3 +36300,823 @@ Processing by TransacaoEntradasController#new as HTML
   Rendered transacao_entradas/new.html.erb within layouts/application (56.5ms)
 Completed 200 OK in 138ms (Views: 136.6ms | ActiveRecord: 0.0ms)
 >>>>>>> Stashed changes
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-03 16:16:22 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.7.1) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.7.1) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (98.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (134.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to ChangeLimitCpftoEight (20161102224351)
+  [1m[35m (42.5ms)[0m  ALTER TABLE `socios` CHANGE `cpf` `cpf` bigint DEFAULT NULL
+  [1m[36m (32.5ms)[0m  [1mALTER TABLE `cadeira_socios` CHANGE `cpf` `cpf` bigint DEFAULT NULL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20161102224351')[0m
+  [1m[35m (85.6ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'cadeira_socios'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `cadeira_socios`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'cadeiras'
+
+  [1m[36m (0.5ms)[0m  [1mSHOW CREATE TABLE `cadeiras`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'caixas'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `caixas`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'mensalidades'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `mensalidades`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'socios'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `socios`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'transacao_entradas'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `transacao_entradas`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'transacao_saidas'
+
+  [1m[36m (0.4ms)[0m  [1mSHOW CREATE TABLE `transacao_saidas`[0m
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-03 16:17:08 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by LoginController#new as HTML
+  Rendered login/new.html.erb within layouts/application (38.4ms)
+Completed 200 OK in 1260ms (Views: 1232.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2016-11-03 16:17:15 -0200
+
+AbstractController::ActionNotFound (The action 'create' could not be found for LoginController):
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.7.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.7.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.7.1) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (21.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (45.1ms)
+
+
+Started GET "/transacao_entradas/new" for 127.0.0.1 at 2016-11-03 16:17:18 -0200
+Processing by TransacaoEntradasController#new as HTML
+  Rendered transacao_entradas/_form.html.erb (40.6ms)
+  Rendered transacao_entradas/new.html.erb within layouts/application (51.9ms)
+Completed 200 OK in 152ms (Views: 119.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/transacao_saidas/new" for 127.0.0.1 at 2016-11-03 16:17:19 -0200
+Processing by TransacaoSaidasController#new as HTML
+  Rendered transacao_saidas/_form.html.erb (33.6ms)
+  Rendered transacao_saidas/new.html.erb within layouts/application (46.2ms)
+Completed 200 OK in 142ms (Views: 119.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/transacao_entradas/new" for 127.0.0.1 at 2016-11-03 16:17:20 -0200
+Processing by TransacaoEntradasController#new as HTML
+  Rendered transacao_entradas/_form.html.erb (25.2ms)
+  Rendered transacao_entradas/new.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 127ms (Views: 126.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/socios" for 127.0.0.1 at 2016-11-03 16:17:21 -0200
+Processing by SociosController#index as HTML
+  [1m[35mSocio Load (0.4ms)[0m  SELECT `socios`.* FROM `socios`
+  Rendered socios/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 125ms (Views: 113.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/socios/new" for 127.0.0.1 at 2016-11-03 16:17:24 -0200
+Processing by SociosController#new as HTML
+  Rendered socios/_form.html.erb (30.1ms)
+  Rendered socios/new.html.erb within layouts/application (41.6ms)
+Completed 200 OK in 116ms (Views: 102.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/socios" for 127.0.0.1 at 2016-11-03 16:17:57 -0200
+Processing by SociosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Im1/JAwwiEl0Vr9KiYIY3dkz+uMnl4WEZZBcqsNBPW1RAXThMRBK66ZAgZ5j6eVqez0bx+KkxtOdSkjtxdWB0A==", "socio"=>{"nome"=>"Batatao", "cpf"=>"085567888912", "email"=>"itsg_negrao@hotmail.com", "telefone"=>"4498469220", "endereco"=>"travessa caramuru", "dataNascimento(1i)"=>"2016", "dataNascimento(2i)"=>"11", "dataNascimento(3i)"=>"3", "sexo"=>"Masculino", "cadeira"=>"1", "senha"=>"1234", "permissao"=>"1", "created_at(1i)"=>"2016", "created_at(2i)"=>"11", "created_at(3i)"=>"3", "created_at(4i)"=>"18", "created_at(5i)"=>"17", "updated_at(1i)"=>"2016", "updated_at(2i)"=>"11", "updated_at(3i)"=>"3", "updated_at(4i)"=>"18", "updated_at(5i)"=>"17"}, "commit"=>"Create Socio"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSocio Exists (0.8ms)[0m  SELECT  1 AS one FROM `socios` WHERE `socios`.`cpf` = BINARY 85567888912 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered socios/_form.html.erb (18.3ms)
+  Rendered socios/new.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 209ms (Views: 85.8ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/socios" for 127.0.0.1 at 2016-11-03 16:18:14 -0200
+Processing by SociosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OY+Kft8zAscINnJS+yHD6SPfFWZtr9XAWn5UHxaxwDNK44G74hPAZdogTIYRSj5egdH0QqiclpeipEBYECV8jg==", "socio"=>{"nome"=>"Batatao", "cpf"=>"08778998712", "email"=>"itsg_negrao@hotmail.com", "telefone"=>"4498469220", "endereco"=>"travessa caramuru", "dataNascimento(1i)"=>"2016", "dataNascimento(2i)"=>"11", "dataNascimento(3i)"=>"3", "sexo"=>"Masculino", "cadeira"=>"1", "senha"=>"1234", "permissao"=>"1", "created_at(1i)"=>"2016", "created_at(2i)"=>"11", "created_at(3i)"=>"3", "created_at(4i)"=>"18", "created_at(5i)"=>"17", "updated_at(1i)"=>"2016", "updated_at(2i)"=>"11", "updated_at(3i)"=>"3", "updated_at(4i)"=>"18", "updated_at(5i)"=>"17"}, "commit"=>"Create Socio"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSocio Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `socios` WHERE `socios`.`cpf` = BINARY 8778998712 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  Rendered socios/_form.html.erb (19.3ms)
+  Rendered socios/new.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 105ms (Views: 91.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/socios" for 127.0.0.1 at 2016-11-03 16:18:36 -0200
+Processing by SociosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dyfk+zJh238U5fCnOKJM43OgUtgqy1wx3cABZ4wU0R8ES+8+D0EZ3cbzznPSybFU0a6z/O/4H2YlGhUgioBtog==", "socio"=>{"nome"=>"Batatao", "cpf"=>"12345678910", "email"=>"itsg_negrao@hotmail.com", "telefone"=>"4498469220", "endereco"=>"travessa caramuru", "dataNascimento(1i)"=>"2016", "dataNascimento(2i)"=>"11", "dataNascimento(3i)"=>"3", "sexo"=>"Masculino", "cadeira"=>"1", "senha"=>"1234", "permissao"=>"1", "created_at(1i)"=>"2016", "created_at(2i)"=>"11", "created_at(3i)"=>"3", "created_at(4i)"=>"18", "created_at(5i)"=>"17", "updated_at(1i)"=>"2016", "updated_at(2i)"=>"11", "updated_at(3i)"=>"3", "updated_at(4i)"=>"18", "updated_at(5i)"=>"17"}, "commit"=>"Create Socio"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSocio Exists (1.4ms)[0m  SELECT  1 AS one FROM `socios` WHERE `socios`.`cpf` = BINARY 12345678910 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered socios/_form.html.erb (28.0ms)
+  Rendered socios/new.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 122ms (Views: 109.1ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/socios" for 127.0.0.1 at 2016-11-03 16:19:42 -0200
+Processing by SociosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LNgJ4hH5kiAXbOFrqpwrEhY3WJwyqFh5FlJ2gsuw1fxftAInLNlQgsV6379A99altDm5uPebGy7uiGLFzSRpQQ==", "socio"=>{"nome"=>"Batatao", "cpf"=>"11122233344", "email"=>"itsg_negrao@hotmail.com", "telefone"=>"4498469220", "endereco"=>"travessa caramuru", "dataNascimento(1i)"=>"2016", "dataNascimento(2i)"=>"11", "dataNascimento(3i)"=>"3", "sexo"=>"Masculino", "cadeira"=>"1", "senha"=>"1234", "permissao"=>"1", "created_at(1i)"=>"2016", "created_at(2i)"=>"11", "created_at(3i)"=>"3", "created_at(4i)"=>"18", "created_at(5i)"=>"17", "updated_at(1i)"=>"2016", "updated_at(2i)"=>"11", "updated_at(3i)"=>"3", "updated_at(4i)"=>"18", "updated_at(5i)"=>"17"}, "commit"=>"Create Socio"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSocio Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `socios` WHERE `socios`.`cpf` = BINARY 11122233344 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered socios/_form.html.erb (23.5ms)
+  Rendered socios/new.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 111ms (Views: 101.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/socios" for 127.0.0.1 at 2016-11-03 16:26:39 -0200
+Processing by SociosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9xZiT+Ge31oKHXNh6nA4wbj4Z0LgDifsIYxnUqCgxdqEemmK3L4d+NgLTbUAG8V2GvaGZiU9ZLvZVnMVpjR5Zw==", "socio"=>{"nome"=>"Batatao", "cpf"=>"08474392918", "email"=>"itsg_negrao@hotmail.com", "telefone"=>"4498469220", "endereco"=>"travessa caramuru", "dataNascimento(1i)"=>"2016", "dataNascimento(2i)"=>"11", "dataNascimento(3i)"=>"3", "sexo"=>"Masculino", "cadeira"=>"1", "senha"=>"1234", "permissao"=>"1", "created_at(1i)"=>"2016", "created_at(2i)"=>"11", "created_at(3i)"=>"3", "created_at(4i)"=>"18", "created_at(5i)"=>"17", "updated_at(1i)"=>"2016", "updated_at(2i)"=>"11", "updated_at(3i)"=>"3", "updated_at(4i)"=>"18", "updated_at(5i)"=>"17"}, "commit"=>"Create Socio"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSocio Exists (0.7ms)[0m  SELECT  1 AS one FROM `socios` WHERE `socios`.`cpf` = BINARY 8474392918 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  Rendered socios/_form.html.erb (18.4ms)
+  Rendered socios/new.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 89ms (Views: 79.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/socios" for 127.0.0.1 at 2016-11-03 16:26:50 -0200
+Processing by SociosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jXRz6yFkAbQU2yS8EXUOhtz9Fnj/5v36LcfZGYpmqzL+GHguHETDFsbNGmj7HvMxfvP3XDrVvq3VHc1ejPIXjw==", "socio"=>{"nome"=>"Batatao", "cpf"=>"08474392918", "email"=>"itsg_negrao@hotmail.com", "telefone"=>"4498469220", "endereco"=>"travessa caramuru", "dataNascimento(1i)"=>"2016", "dataNascimento(2i)"=>"11", "dataNascimento(3i)"=>"3", "sexo"=>"Masculino", "cadeira"=>"1", "senha"=>"1234", "permissao"=>"1", "created_at(1i)"=>"2016", "created_at(2i)"=>"11", "created_at(3i)"=>"3", "created_at(4i)"=>"18", "created_at(5i)"=>"17", "updated_at(1i)"=>"2016", "updated_at(2i)"=>"11", "updated_at(3i)"=>"3", "updated_at(4i)"=>"18", "updated_at(5i)"=>"17"}, "commit"=>"Create Socio"}
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSocio Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `socios` WHERE `socios`.`cpf` = BINARY 8474392918 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  Rendered socios/_form.html.erb (21.2ms)
+  Rendered socios/new.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 102ms (Views: 88.5ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/socios" for 127.0.0.1 at 2016-11-03 16:28:11 -0200
+Processing by SociosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eZXew2UtQ3an73k/uKSGtOCKh7bPItXXOg1ws1VhYaAK+dUGWA2B1HX5R+tSz3sDQoRmkgoRloDC12T0U/XdHQ==", "socio"=>{"nome"=>"Batatao", "cpf"=>"08474392918", "email"=>"itsg_negrao@hotmail.com", "telefone"=>"4498469220", "endereco"=>"travessa caramuru", "dataNascimento(1i)"=>"2016", "dataNascimento(2i)"=>"11", "dataNascimento(3i)"=>"3", "sexo"=>"Masculino", "cadeira"=>"1", "senha"=>"1234", "permissao"=>"1", "created_at(1i)"=>"2016", "created_at(2i)"=>"11", "created_at(3i)"=>"3", "created_at(4i)"=>"18", "created_at(5i)"=>"17", "updated_at(1i)"=>"2016", "updated_at(2i)"=>"11", "updated_at(3i)"=>"3", "updated_at(4i)"=>"18", "updated_at(5i)"=>"17"}, "commit"=>"Create Socio"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSocio Exists (0.3ms)[0m  SELECT  1 AS one FROM `socios` WHERE `socios`.`cpf` = BINARY 8474392918 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered socios/_form.html.erb (21.1ms)
+  Rendered socios/new.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 116ms (Views: 108.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/socios" for 127.0.0.1 at 2016-11-03 16:29:51 -0200
+Processing by SociosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U9mu73/MUewg/BCVG+s5IMtAssG9mlIRzbqZhKBPz1EgtaUqQuyTTvLqLkHxgMSXaU5T5XipEUY1YI3Dpttz7A==", "socio"=>{"nome"=>"Batatao", "cpf"=>"38851631875", "email"=>"itsg_negrao@hotmail.com", "telefone"=>"4498469220", "endereco"=>"travessa caramuru", "dataNascimento(1i)"=>"2016", "dataNascimento(2i)"=>"11", "dataNascimento(3i)"=>"3", "sexo"=>"Masculino", "cadeira"=>"1", "senha"=>"1234", "permissao"=>"1", "created_at(1i)"=>"2016", "created_at(2i)"=>"11", "created_at(3i)"=>"3", "created_at(4i)"=>"18", "created_at(5i)"=>"17", "updated_at(1i)"=>"2016", "updated_at(2i)"=>"11", "updated_at(3i)"=>"3", "updated_at(4i)"=>"18", "updated_at(5i)"=>"17"}, "commit"=>"Create Socio"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSocio Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `socios` WHERE `socios`.`cpf` = BINARY 38851631875 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.2ms)
+
+RangeError (4498469220 is out of range for ActiveRecord::Type::Integer with limit 4):
+  app/controllers/socios_controller.rb:30:in `block in create'
+  app/controllers/socios_controller.rb:29:in `create'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (28.7ms)
+
+
+Started GET "/socios" for 127.0.0.1 at 2016-11-03 16:31:13 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by SociosController#index as HTML
+  [1m[35mSocio Load (0.6ms)[0m  SELECT `socios`.* FROM `socios`
+  Rendered socios/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 109ms (Views: 106.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/socios/new" for 127.0.0.1 at 2016-11-03 16:31:14 -0200
+Processing by SociosController#new as HTML
+  Rendered socios/_form.html.erb (29.3ms)
+  Rendered socios/new.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 116ms (Views: 114.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/socios" for 127.0.0.1 at 2016-11-03 16:32:02 -0200
+Processing by SociosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"53OWCsaKFVrT1w2A9WEeVwcVDEjlt5c10HCowYxpP2+UH53P+6rX+AHBM1QfCuPgpRvtbCCE1GIoqryGiv2D0g==", "socio"=>{"nome"=>"Gabriel", "cpf"=>"08474392918", "email"=>"itsg", "telefone"=>"4498469220", "endereco"=>"travessa caramuru", "dataNascimento(1i)"=>"2016", "dataNascimento(2i)"=>"11", "dataNascimento(3i)"=>"3", "sexo"=>"Masculino", "cadeira"=>"1", "senha"=>"1234", "permissao"=>"1", "created_at(1i)"=>"2016", "created_at(2i)"=>"11", "created_at(3i)"=>"3", "created_at(4i)"=>"18", "created_at(5i)"=>"31", "updated_at(1i)"=>"2016", "updated_at(2i)"=>"11", "updated_at(3i)"=>"3", "updated_at(4i)"=>"18", "updated_at(5i)"=>"31"}, "commit"=>"Create Socio"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSocio Exists (0.5ms)[0m  SELECT  1 AS one FROM `socios` WHERE `socios`.`cpf` = BINARY 8474392918 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered socios/_form.html.erb (22.6ms)
+  Rendered socios/new.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 102ms (Views: 91.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/socios" for 127.0.0.1 at 2016-11-03 16:32:10 -0200
+Processing by SociosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8TSEB2oDbcxrfDq17U5dM0Am4agPv7sOhzxpG2jo08CCWI/CVyOvbrlqBGEHJaCE4igAjMqM+Fl/5n1cbnxvfQ==", "socio"=>{"nome"=>"Gabriel", "cpf"=>"08474392918", "email"=>"itsg_negrao@hotmail.com", "telefone"=>"4498469220", "endereco"=>"travessa caramuru", "dataNascimento(1i)"=>"2016", "dataNascimento(2i)"=>"11", "dataNascimento(3i)"=>"3", "sexo"=>"Masculino", "cadeira"=>"1", "senha"=>"1234", "permissao"=>"1", "created_at(1i)"=>"2016", "created_at(2i)"=>"11", "created_at(3i)"=>"3", "created_at(4i)"=>"18", "created_at(5i)"=>"31", "updated_at(1i)"=>"2016", "updated_at(2i)"=>"11", "updated_at(3i)"=>"3", "updated_at(4i)"=>"18", "updated_at(5i)"=>"31"}, "commit"=>"Create Socio"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSocio Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `socios` WHERE `socios`.`cpf` = BINARY 8474392918 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  Rendered socios/_form.html.erb (23.5ms)
+  Rendered socios/new.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 100ms (Views: 89.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/socios" for 127.0.0.1 at 2016-11-03 16:32:35 -0200
+Processing by SociosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qGbu5DsD3UlpZel9V9z04yrXux6zWSHd+YiDseu6nNnbCuUhBiMf67tz16m9twlUiNlaOnZqYooBUpf27S4gZA==", "socio"=>{"nome"=>"Gabriel", "cpf"=>"08474392918", "email"=>"itsg_negrao@hotmail.com", "telefone"=>"4498469220", "endereco"=>"travessa caramuru", "dataNascimento(1i)"=>"2016", "dataNascimento(2i)"=>"11", "dataNascimento(3i)"=>"3", "sexo"=>"Masculino", "cadeira"=>"1", "senha"=>"1234", "permissao"=>"1", "created_at(1i)"=>"2016", "created_at(2i)"=>"11", "created_at(3i)"=>"3", "created_at(4i)"=>"18", "created_at(5i)"=>"31", "updated_at(1i)"=>"2016", "updated_at(2i)"=>"11", "updated_at(3i)"=>"3", "updated_at(4i)"=>"18", "updated_at(5i)"=>"31"}, "commit"=>"Create Socio"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSocio Exists (0.5ms)[0m  SELECT  1 AS one FROM `socios` WHERE `socios`.`cpf` = BINARY 8474392918 LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  Rendered socios/_form.html.erb (22.3ms)
+  Rendered socios/new.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 113ms (Views: 96.6ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/socios" for 127.0.0.1 at 2016-11-03 16:32:40 -0200
+Processing by SociosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zLcOc8t5qcEO9nDGnPv1HFdqtwH34oV5dfo96cSzsy+/2wW29llrY9zgThJ2kAir9WRWJTLRxi6NICmuwicPkg==", "socio"=>{"nome"=>"Gabriel", "cpf"=>"08474392918", "email"=>"itsg_negrao@hotmail.com", "telefone"=>"4498469220", "endereco"=>"travessa caramuru", "dataNascimento(1i)"=>"2016", "dataNascimento(2i)"=>"11", "dataNascimento(3i)"=>"3", "sexo"=>"Masculino", "cadeira"=>"1", "senha"=>"1234", "permissao"=>"1", "created_at(1i)"=>"2016", "created_at(2i)"=>"11", "created_at(3i)"=>"3", "created_at(4i)"=>"18", "created_at(5i)"=>"31", "updated_at(1i)"=>"2016", "updated_at(2i)"=>"11", "updated_at(3i)"=>"3", "updated_at(4i)"=>"18", "updated_at(5i)"=>"31"}, "commit"=>"Create Socio"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSocio Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `socios` WHERE `socios`.`cpf` = BINARY 8474392918 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered socios/_form.html.erb (19.9ms)
+  Rendered socios/new.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 95ms (Views: 86.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/socios" for 127.0.0.1 at 2016-11-03 16:32:57 -0200
+Processing by SociosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ixRNXTtVRmr3UeWKiiMzGMioVnryMNOS+kLanow4MsT4eEaYBnWEyCVH215gSM6vaqa3XjcDkMUCmM7ZiqyOeQ==", "socio"=>{"nome"=>"Gabriel", "cpf"=>"38851631875", "email"=>"itsg_negrao@hotmail.com", "telefone"=>"4498469220", "endereco"=>"travessa caramuru", "dataNascimento(1i)"=>"2016", "dataNascimento(2i)"=>"11", "dataNascimento(3i)"=>"3", "sexo"=>"Masculino", "cadeira"=>"1", "senha"=>"1234", "permissao"=>"1", "created_at(1i)"=>"2016", "created_at(2i)"=>"11", "created_at(3i)"=>"3", "created_at(4i)"=>"18", "created_at(5i)"=>"31", "updated_at(1i)"=>"2016", "updated_at(2i)"=>"11", "updated_at(3i)"=>"3", "updated_at(4i)"=>"18", "updated_at(5i)"=>"31"}, "commit"=>"Create Socio"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSocio Exists (0.8ms)[0m  SELECT  1 AS one FROM `socios` WHERE `socios`.`cpf` = BINARY 38851631875 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.3ms)
+
+RangeError (4498469220 is out of range for ActiveRecord::Type::Integer with limit 4):
+  app/controllers/socios_controller.rb:30:in `block in create'
+  app/controllers/socios_controller.rb:29:in `create'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (7.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (35.8ms)
+
+
+Started GET "/socios" for 127.0.0.1 at 2016-11-03 16:33:03 -0200
+Processing by SociosController#index as HTML
+  [1m[35mSocio Load (0.6ms)[0m  SELECT `socios`.* FROM `socios`
+  Rendered socios/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 117ms (Views: 115.2ms | ActiveRecord: 0.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'cadeira_socios'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `cadeira_socios`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'cadeiras'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `cadeiras`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'caixas'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `caixas`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'mensalidades'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `mensalidades`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'socios'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `socios`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'transacao_entradas'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `transacao_entradas`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'transacao_saidas'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `transacao_saidas`
+
+
+Started GET "/socios/new" for 127.0.0.1 at 2016-11-03 16:33:14 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by SociosController#new as HTML
+  Rendered socios/_form.html.erb (33.5ms)
+  Rendered socios/new.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 518ms (Views: 495.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/socios" for 127.0.0.1 at 2016-11-03 16:34:08 -0200
+Processing by SociosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L1CJzsrc/vN5ue0sV3EZQI0yIfPY2iAayd0ls0PvaqZcPIIL9/w8Uauv0/i9GuT3LzzA1x3pY00xBzH0RXvWGw==", "socio"=>{"nome"=>"Gabriel", "cpf"=>"38851631875", "email"=>"itsg_negrao@hotmail.com", "telefone"=>"4498469220", "endereco"=>"travessa caramuru", "dataNascimento(1i)"=>"2016", "dataNascimento(2i)"=>"11", "dataNascimento(3i)"=>"3", "sexo"=>"Masculino", "cadeira"=>"1", "senha"=>"1234", "permissao"=>"1", "created_at(1i)"=>"2016", "created_at(2i)"=>"11", "created_at(3i)"=>"3", "created_at(4i)"=>"18", "created_at(5i)"=>"33", "updated_at(1i)"=>"2016", "updated_at(2i)"=>"11", "updated_at(3i)"=>"3", "updated_at(4i)"=>"18", "updated_at(5i)"=>"33"}, "commit"=>"Create Socio"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSocio Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `socios` WHERE `socios`.`cpf` = BINARY 38851631875 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.9ms)
+
+RangeError (4498469220 is out of range for ActiveRecord::Type::Integer with limit 4):
+  app/controllers/socios_controller.rb:30:in `block in create'
+  app/controllers/socios_controller.rb:29:in `create'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (30.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'cadeira_socios'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `cadeira_socios`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'cadeiras'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `cadeiras`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'caixas'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `caixas`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'mensalidades'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `mensalidades`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'socios'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `socios`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'transacao_entradas'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `transacao_entradas`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'transacao_saidas'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `transacao_saidas`
+  [1m[36m (320.2ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (412.0ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateCadeiras (20160915102706)
+  [1m[35m (289.9ms)[0m  CREATE TABLE `cadeiras` (`id` int(11) auto_increment PRIMARY KEY, `cadeira` int(11) NOT NULL, `data_posse` date, `data_saida` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160915102706')
+  [1m[36m (45.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCadeiraSocios (20160915102722)
+  [1m[35m (287.7ms)[0m  CREATE TABLE `cadeira_socios` (`id` int(11) auto_increment PRIMARY KEY, `cpf` int(11), `cadeira` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160915102722')
+  [1m[36m (41.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCaixas (20160915102731)
+  [1m[35m (344.7ms)[0m  CREATE TABLE `caixas` (`id` int(11) auto_increment PRIMARY KEY, `id_caixa` int(11) NOT NULL, `data_caixa` date, `saldo` float, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160915102731')
+  [1m[36m (63.8ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMensalidades (20160915102739)
+  [1m[35m (276.9ms)[0m  CREATE TABLE `mensalidades` (`id` int(11) auto_increment PRIMARY KEY, `id_entrada` int(11) NOT NULL, `data_entrada` date, `justifica_entrada` varchar(200), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160915102739')
+  [1m[36m (40.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSocios (20160928200918)
+  [1m[35m (265.1ms)[0m  CREATE TABLE `socios` (`id` int(11) auto_increment PRIMARY KEY, `nome` varchar(255), `cpf` int(11), `email` varchar(255), `telefone` int(11), `endereco` varchar(255), `dataNascimento` date, `sexo` varchar(255), `cadeira` int(11), `senha` varchar(255), `permissao` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160928200918')
+  [1m[36m (31.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTransacaoEntradas (20161101224807)
+  [1m[35m (354.9ms)[0m  CREATE TABLE `transacao_entradas` (`id` int(11) auto_increment PRIMARY KEY, `id_entrada` int(11), `valor` float, `data_entrada` date, `justifica_entrada` varchar(255), `tipo` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161101224807')
+  [1m[36m (40.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTransacaoSaidas (20161101234553)
+  [1m[35m (417.0ms)[0m  CREATE TABLE `transacao_saidas` (`id` int(11) auto_increment PRIMARY KEY, `id_saida` int(11), `valor` float, `data_saida` date, `justifica_saida` varchar(255), `img_comprov` blob, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161101234553')
+  [1m[36m (40.6ms)[0m  [1mCOMMIT[0m
+Migrating to ChangeLimitCpftoEight (20161102224351)
+  [1m[35m (554.9ms)[0m  ALTER TABLE `socios` CHANGE `cpf` `cpf` bigint DEFAULT NULL
+  [1m[36m (702.4ms)[0m  [1mALTER TABLE `cadeira_socios` CHANGE `cpf` `cpf` bigint DEFAULT NULL[0m
+  [1m[35m (657.0ms)[0m  ALTER TABLE `socios` CHANGE `telefone` `telefone` bigint DEFAULT NULL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161102224351')
+  [1m[36m (40.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'cadeira_socios'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `cadeira_socios`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'cadeiras'
+[0m
+  [1m[35m (0.8ms)[0m  SHOW CREATE TABLE `cadeiras`
+  [1m[36m (0.5ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'caixas'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `caixas`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'mensalidades'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `mensalidades`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'socios'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `socios`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'transacao_entradas'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `transacao_entradas`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'transacao_saidas'
+[0m
+  [1m[35m (0.7ms)[0m  SHOW CREATE TABLE `transacao_saidas`
+
+
+Started GET "/socios" for 127.0.0.1 at 2016-11-03 16:36:03 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by SociosController#index as HTML
+  [1m[35mSocio Load (0.8ms)[0m  SELECT `socios`.* FROM `socios`
+  Rendered socios/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 449ms (Views: 434.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/transacao_entradas/new" for 127.0.0.1 at 2016-11-03 16:36:04 -0200
+Processing by TransacaoEntradasController#new as HTML
+  Rendered transacao_entradas/_form.html.erb (46.1ms)
+  Rendered transacao_entradas/new.html.erb within layouts/application (53.4ms)
+Completed 200 OK in 169ms (Views: 121.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/socios" for 127.0.0.1 at 2016-11-03 16:36:07 -0200
+Processing by SociosController#index as HTML
+  [1m[36mSocio Load (0.7ms)[0m  [1mSELECT `socios`.* FROM `socios`[0m
+  Rendered socios/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 139ms (Views: 137.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/socios/new" for 127.0.0.1 at 2016-11-03 16:36:09 -0200
+Processing by SociosController#new as HTML
+  Rendered socios/_form.html.erb (34.9ms)
+  Rendered socios/new.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 105ms (Views: 88.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/socios" for 127.0.0.1 at 2016-11-03 16:36:50 -0200
+Processing by SociosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yJGZ4QjX7FIwi8oP3UTz5fIiNYkPJ1G625zsz00V07+7/ZIkNfcu8OKd9Ns3Lw5SUCzUrcoUEu0jRviIS4FvAg==", "socio"=>{"nome"=>"Gabriel", "cpf"=>"08474392918", "email"=>"itsg_negrao@hotmail.com", "telefone"=>"4498469220", "endereco"=>"travessa caramuru", "dataNascimento(1i)"=>"2016", "dataNascimento(2i)"=>"11", "dataNascimento(3i)"=>"3", "sexo"=>"Masculino", "cadeira"=>"1", "senha"=>"1234", "permissao"=>"1", "created_at(1i)"=>"2016", "created_at(2i)"=>"11", "created_at(3i)"=>"3", "created_at(4i)"=>"18", "created_at(5i)"=>"36", "updated_at(1i)"=>"2016", "updated_at(2i)"=>"11", "updated_at(3i)"=>"3", "updated_at(4i)"=>"18", "updated_at(5i)"=>"36"}, "commit"=>"Create Socio"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSocio Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `socios` WHERE `socios`.`cpf` = BINARY 8474392918 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  Rendered socios/_form.html.erb (24.2ms)
+  Rendered socios/new.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 151ms (Views: 121.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/socios" for 127.0.0.1 at 2016-11-03 16:37:41 -0200
+Processing by SociosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5CcEhGDBxFSjumWiHVFCCDzHxA/c15aFZBch9sdTrquXSw9BXeEG9nGsW3b3Or+/nsklKxnk1dKczTWxwccSFg==", "socio"=>{"nome"=>"Gabriel", "cpf"=>"38474392918", "email"=>"itsg_negrao@hotmail.com", "telefone"=>"4498469220", "endereco"=>"travessa caramuru", "dataNascimento(1i)"=>"2016", "dataNascimento(2i)"=>"11", "dataNascimento(3i)"=>"3", "sexo"=>"Masculino", "cadeira"=>"1", "senha"=>"1234", "permissao"=>"1", "created_at(1i)"=>"2016", "created_at(2i)"=>"11", "created_at(3i)"=>"3", "created_at(4i)"=>"18", "created_at(5i)"=>"36", "updated_at(1i)"=>"2016", "updated_at(2i)"=>"11", "updated_at(3i)"=>"3", "updated_at(4i)"=>"18", "updated_at(5i)"=>"36"}, "commit"=>"Create Socio"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSocio Exists (0.5ms)[0m  SELECT  1 AS one FROM `socios` WHERE `socios`.`cpf` = BINARY 38474392918 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered socios/_form.html.erb (15.3ms)
+  Rendered socios/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 87ms (Views: 78.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/socios" for 127.0.0.1 at 2016-11-03 16:37:51 -0200
+Processing by SociosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rkbP6vHrGegrjyivnqLjRSPKPJJjOqD7hQ7w13jVqHTdKsQvzMvbSvmZFnt0yR7ygcTdtqYJ46x91OSQfkEUyQ==", "socio"=>{"nome"=>"Gabriel", "cpf"=>"08474392918", "email"=>"itsg_negrao@hotmail.com", "telefone"=>"4498469220", "endereco"=>"travessa caramuru", "dataNascimento(1i)"=>"2016", "dataNascimento(2i)"=>"11", "dataNascimento(3i)"=>"3", "sexo"=>"Masculino", "cadeira"=>"1", "senha"=>"1234", "permissao"=>"1", "created_at(1i)"=>"2016", "created_at(2i)"=>"11", "created_at(3i)"=>"3", "created_at(4i)"=>"18", "created_at(5i)"=>"36", "updated_at(1i)"=>"2016", "updated_at(2i)"=>"11", "updated_at(3i)"=>"3", "updated_at(4i)"=>"18", "updated_at(5i)"=>"36"}, "commit"=>"Create Socio"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSocio Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `socios` WHERE `socios`.`cpf` = BINARY 8474392918 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered socios/_form.html.erb (19.4ms)
+  Rendered socios/new.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 96ms (Views: 88.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/transacao_entradas/new" for 127.0.0.1 at 2016-11-03 16:38:12 -0200
+Processing by TransacaoEntradasController#new as HTML
+  Rendered transacao_entradas/_form.html.erb (14.5ms)
+  Rendered transacao_entradas/new.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 98ms (Views: 97.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/transacao_saidas/new" for 127.0.0.1 at 2016-11-03 16:38:17 -0200
+Processing by TransacaoSaidasController#new as HTML
+  Rendered transacao_saidas/_form.html.erb (17.5ms)
+  Rendered transacao_saidas/new.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 118ms (Views: 92.7ms | ActiveRecord: 1.9ms)
