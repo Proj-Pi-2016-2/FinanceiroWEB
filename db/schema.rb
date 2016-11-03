@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160928200918) do
+ActiveRecord::Schema.define(version: 20161102224351) do
 
   create_table "cadeira_socios", force: :cascade do |t|
     t.integer  "cpf",        limit: 8
     t.integer  "cadeira",    limit: 4
-    t.datetime "created_at,           null: false
+    t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
 
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20160928200918) do
 
   create_table "socios", force: :cascade do |t|
     t.string   "nome",           limit: 255
-    t.integer  "cpf",            limit: 4
+    t.integer  "cpf",            limit: 8
     t.string   "email",          limit: 255
     t.integer  "telefone",       limit: 4
     t.string   "endereco",       limit: 255

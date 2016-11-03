@@ -2,7 +2,7 @@ class CreateSocios < ActiveRecord::Migration
   def change
     create_table :socios do |t|
       t.string :nome
-      t.integer :cpf, :limit => 8
+      t.integer :cpf
       t.string :email
       t.integer :telefone
       t.string :endereco
