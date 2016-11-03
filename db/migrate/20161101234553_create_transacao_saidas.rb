@@ -5,7 +5,7 @@ class CreateTransacaoSaidas < ActiveRecord::Migration
       t.float :valor
       t.date :data_saida
       t.string :justifica_saida
-      t.binary :img_comprov
+      t.attachment :img_comprov
       t.datetime :created_at
       t.datetime :updated_at
 

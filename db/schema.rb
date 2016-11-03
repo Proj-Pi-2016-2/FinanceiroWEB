@@ -70,13 +70,16 @@ ActiveRecord::Schema.define(version: 20161102224351) do
   end
 
   create_table "transacao_saidas", force: :cascade do |t|
-    t.integer  "id_saida",        limit: 4
-    t.float    "valor",           limit: 24
+    t.integer  "id_saida",                 limit: 4
+    t.float    "valor",                    limit: 24
     t.date     "data_saida"
-    t.string   "justifica_saida", limit: 255
-    t.binary   "img_comprov",     limit: 65535
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.string   "justifica_saida",          limit: 255
+    t.string   "img_comprov_file_name",    limit: 255
+    t.string   "img_comprov_content_type", limit: 255
+    t.integer  "img_comprov_file_size",    limit: 4
+    t.datetime "img_comprov_updated_at"
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
   end
 
 end

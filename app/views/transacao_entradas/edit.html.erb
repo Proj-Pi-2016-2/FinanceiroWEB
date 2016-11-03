@@ -1,6 +1,11 @@
-<h1>Editing Transacao Entrada</h1>
+<ul class="nav nav-tabs">
+  <li><a href="/transacao_entradas/new">Nova Transação Entrada</a></li>
+  <li class="active"><a href="/transacao_entradas">Exibir Transações de Entrada</a></li>
+  <li><a href="/transacao_saidas/new">Nova Transação Saida</a></li>
+  <li><a href="/transacao_saidas">Exibir Transações de Saida</a></li>
+</ul><br>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @transacao_entrada %> |
-<%= link_to 'Back', transacao_entradas_path %>
+<%= link_to 'Exibir', @transacao_entrada %> |
+<%= link_to 'Voltar', transacao_entradas_path %>

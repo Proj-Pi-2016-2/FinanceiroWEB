@@ -1,24 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<ul class="nav nav-pills">
-  <li class="active">
-    <a href="/transacao_entradas/new">Transação Entrada</a>
-  </li>
-  <li><a href="/transacao_saidas/new">Transação Saida</a></li>
-</ul>
-
-<h1>Transação Entradas</h1>
+<ul class="nav nav-tabs">
+  <li><a href="/transacao_entradas/new">Nova Transação Entrada</a></li>
+  <li class="active"><a href="/transacao_entradas">Exibir Transações de Entrada</a></li>
+  <li><a href="/transacao_saidas/new">Nova Transação Saida</a></li>
+  <li><a href="/transacao_saidas">Exibir Transações de Saida</a></li>
+</ul><br>
 
 <table>
   <thead>
     <tr>
-      <th>Id entrada</th>
-      <th>Valor</th>
-      <th>Data entrada</th>
-      <th>Justifica entrada</th>
-      <th>Tipo</th>
-      <th>Created at</th>
-      <th>Updated at</th>
+      <th>ID:</th>
+      <th>Valor:</th>
+      <th>Data:</th>
+      <th>Justificativa:</th>
+      <th>Tipo:</th>
+      <th>Criado_em:</th>
+      <th>Modificado_em:</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -33,9 +31,9 @@
         <td><%= transacao_entrada.tipo %></td>
         <td><%= transacao_entrada.created_at %></td>
         <td><%= transacao_entrada.updated_at %></td>
-        <td><%= link_to 'Show', transacao_entrada %></td>
-        <td><%= link_to 'Edit', edit_transacao_entrada_path(transacao_entrada) %></td>
-        <td><%= link_to 'Destroy', transacao_entrada, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Exibir', transacao_entrada %></td>
+        <td><%= link_to 'Editar', edit_transacao_entrada_path(transacao_entrada) %></td>
+        <td><%= link_to 'Deletar', transacao_entrada, method: :delete, data: { confirm: 'Você tem Certeza' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -43,4 +41,4 @@
 
 <br>
 
-<%= link_to 'New Transacao entrada', new_transacao_entrada_path %>
+<%= link_to 'Nova Transacao entrada', new_transacao_entrada_path %>

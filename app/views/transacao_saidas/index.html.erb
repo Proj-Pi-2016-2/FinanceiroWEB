@@ -1,17 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Transacao Saidas</h1>
+<ul class="nav nav-tabs">
+  <li><a href="/transacao_entradas/new">Nova Transação Entrada</a></li>
+  <li><a href="/transacao_entradas">Exibir Transações de Entrada</a></li>
+  <li><a href="/transacao_saidas/new">Nova Transação Saida</a></li>
+  <li class="active"><a href="/transacao_saidas">Exibir Transações de Saida</a></li>
+</ul><br>
 
 <table>
   <thead>
     <tr>
-      <th>Id saida</th>
-      <th>Valor</th>
-      <th>Data saida</th>
-      <th>Justifica saida</th>
-      <th>Img comprov</th>
-      <th>Created at</th>
-      <th>Updated at</th>
+      <th>Id:</th>
+      <th>Valor:</th>
+      <th>Data:</th>
+      <th>Justificativa:</th>
+      <th>Comprovante:</th>
+      <th>Criado_em:</th>
+      <th>Modificado_em:</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,12 +28,15 @@
         <td><%= transacao_saida.valor %></td>
         <td><%= transacao_saida.data_saida %></td>
         <td><%= transacao_saida.justifica_saida %></td>
-        <td><%= transacao_saida.img_comprov %></td>
+        <td>
+          <%= image_tag transacao_saida.img_comprov.url(:thumb)%>
+          <%= link_to "Exibir", transacao_saida.img_comprov.url(:original, false) %>
+        </td>
         <td><%= transacao_saida.created_at %></td>
         <td><%= transacao_saida.updated_at %></td>
-        <td><%= link_to 'Show', transacao_saida %></td>
-        <td><%= link_to 'Edit', edit_transacao_saida_path(transacao_saida) %></td>
-        <td><%= link_to 'Destroy', transacao_saida, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Exibir', transacao_saida %></td>
+        <td><%= link_to 'Editar', edit_transacao_saida_path(transacao_saida) %></td>
+        <td><%= link_to 'Deletar', transacao_saida, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +44,4 @@
 
 <br>
 
-<%= link_to 'New Transacao saida', new_transacao_saida_path %>
+<%= link_to 'Nova Transacao Saida', new_transacao_saida_path %>
