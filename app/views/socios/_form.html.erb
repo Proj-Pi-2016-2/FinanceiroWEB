@@ -32,8 +32,8 @@
     <%= f.text_field :endereco %>
   </div>
   <div class="field">
-    <%= f.label :data_de_nascimento, start_year: 1900%><br>
-    <%= f.date_select :dataNascimento %>
+    <%= f.label :data_de_nascimento%><br>
+    <%= f.date_select :dataNascimento, start_year: 1900  %>
   </div>
   <div class="field">
     <%= f.label :sexo %><br>
@@ -61,6 +61,6 @@
     <%= f.datetime_select :updated_at, start_year: 2016%>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: 'btn btn-primary', value: 'Concluir' %>
   </div>
 <% end %>

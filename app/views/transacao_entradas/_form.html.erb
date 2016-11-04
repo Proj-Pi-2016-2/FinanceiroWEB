@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :tipo %><br>
-    <%= f.text_field :tipo %>
+    <%= f.select :tipo, ['Doação', 'Mensalidade', 'Outro']%>
   </div>
   <div class="field">
     <%= f.label :criado_em %><br>
@@ -37,9 +37,9 @@
   </div>
   <div class="field">
     <%= f.label :modificado_em %><br>
-    <%= f.datetime_select :updated_at %>
+    <%= f.datetime_select :updated_at%>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: 'btn btn-primary', value: 'Concluir' %>
   </div>
 <% end %>

@@ -1,16 +1,15 @@
-<h1>Login</h1>
+<h1 align="center">Login</h1>
  <%= form_for :login, url: login_index_path do |f| %>
-    <div class="field">
+    <div class="field" align="center">
       <%= f.label :email %><br />
       <%= f.email_field :email, autofocus: true %>
     </div>
-   
-    <div class="field">
+
+    <div class="field" align="center">
       <%= f.label :senha %><br />
       <%= f.password_field :senha, autocomplete: "off" %>
     </div>
-    <div class="actions">
-      <%= f.submit "Entrar" %>
+    <div class="actions" align="center">
+      <%= f.submit class: 'btn btn-primary', value: 'Entrar' %>
     </div>
-  <p><%= link_to "Cadastrar Novo", new_socio_path %></p>
   <% end %>

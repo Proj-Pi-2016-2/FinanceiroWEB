@@ -56,7 +56,7 @@ class TransacaoSaidasController < ApplicationController
   def destroy
     @transacao_saida.destroy
     respond_to do |format|
-      format.html { redirect_to transacao_saidas_url, notice: 'Transacao de saida deletada com cucesso.' }
+      format.html { redirect_to transacao_saidas_url, notice: 'Transacao de saida deletada com sucesso.' }
       format.json { head :no_content }
     end
   end
