@@ -38,6 +38,8 @@
   </head>
   <body>
 
+    
+
     <div class="navbar navbar-default navbar-static-top">
       <div class="container">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
@@ -52,16 +54,22 @@
             <li><%= link_to "Lançamentos", "/transacao_entradas/new"  %></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Logout</a></li>
+            <!--<li><a href="/login"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Logout</a></li>-->
+            <li><% if current_user %><%= link_to 'Log Out', logout_path %>
+            <% else %><%= link_to 'Log In', login_path %>
+            <% end %>
+            </li>
+          </div>
           </ul>
         </div>
       </div>
     </div>
+    
 
     <div class="container">
       <div class="row">
         <div class="col-lg-9">
-          <%= bootstrap_flash %>
+          <%= bootstrap_flash %>          
           <%= yield %>
         </div>
         <div class="col-lg-3">

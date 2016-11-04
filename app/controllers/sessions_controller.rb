@@ -5,10 +5,10 @@ class SessionsController < ApplicationController
  end
  
  def create
- 	user = Socio.find_by(email: params[:email])
- 	if user && user.authenticate(params[:senha])
+ 	user = Socio.find_by(email: params[:eemail])
+ 	if user #&& user.authenticate(params[:senha])
  		session[:id] = user.id
- 		redirect_to root_url, notice: "Logado com sucesso!"
+ 		redirect_to socios_path, notice: "Logado com sucesso!"
  	else
  		flash.now.alert = "Email ou Senha invalida"
  		render "new"
@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
  
  def destroy
  	session[:id] = nil
- 	redirect_to root_url, notice: "Deslogado com sucesso!"
+ 	redirect_to login_path, notice: "Deslogado com sucesso!"
  end
 
 end
