@@ -1,6 +1,6 @@
 class TransacaoSaidasController < ApplicationController
   before_action :set_transacao_saida, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /transacao_saidas
   # GET /transacao_saidas.json
   def index

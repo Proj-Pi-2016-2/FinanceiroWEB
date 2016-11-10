@@ -46066,3 +46066,722 @@ Processing by SociosController#index as HTML
   [1m[36mSocio Load (0.3ms)[0m  [1mSELECT `socios`.* FROM `socios`[0m
   Rendered socios/index.html.erb within layouts/application (1.9ms)
 Completed 200 OK in 61ms (Views: 60.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/socios" for 127.0.0.1 at 2016-11-10 16:35:52 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by SociosController#index as HTML
+  [1m[35mSocio Load (0.3ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 2 LIMIT 1
+  [1m[36mSocio Load (0.3ms)[0m  [1mSELECT `socios`.* FROM `socios`[0m
+  Rendered socios/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 3459ms (Views: 3394.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2016-11-10 16:35:57 -0200
+
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/golom/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/golom/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/golom/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (45.5ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (99.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (89.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (105.4ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2016-11-10 16:36:00 -0200
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2016-11-10 16:36:00 -0200
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 89ms (Views: 88.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/socios" for 127.0.0.1 at 2016-11-10 16:36:06 -0200
+Processing by SociosController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2016-11-10 16:36:06 -0200
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 60ms (Views: 59.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/socios" for 127.0.0.1 at 2016-11-10 16:36:12 -0200
+Processing by SociosController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2016-11-10 16:36:13 -0200
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/socios" for 127.0.0.1 at 2016-11-10 16:36:22 -0200
+Processing by SociosController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2016-11-10 16:36:22 -0200
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 54ms (Views: 54.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/socios/new" for 127.0.0.1 at 2016-11-10 16:36:24 -0200
+Processing by SociosController#new as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2016-11-10 16:36:24 -0200
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 49ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login/new" for 127.0.0.1 at 2016-11-10 16:36:37 -0200
+
+ActionController::RoutingError (No route matches [GET] "/login/new"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/golom/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/golom/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/golom/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (26.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.5ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.7ms)
+
+
+Started GET "/transacao_entradas/new" for 127.0.0.1 at 2016-11-10 16:36:45 -0200
+Processing by TransacaoEntradasController#new as HTML
+  Rendered transacao_entradas/_form.html.erb (65.8ms)
+  Rendered transacao_entradas/new.html.erb within layouts/application (72.4ms)
+Completed 200 OK in 316ms (Views: 140.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/transacao_entradas" for 127.0.0.1 at 2016-11-10 16:36:49 -0200
+Processing by TransacaoEntradasController#index as HTML
+  [1m[35mTransacaoEntrada Load (0.3ms)[0m  SELECT `transacao_entradas`.* FROM `transacao_entradas`
+  Rendered transacao_entradas/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 59ms (Views: 58.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/transacao_saidas/new" for 127.0.0.1 at 2016-11-10 16:37:35 -0200
+Processing by TransacaoSaidasController#new as HTML
+  Rendered transacao_saidas/_form.html.erb (18.6ms)
+  Rendered transacao_saidas/new.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 100ms (Views: 82.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/transacao_entradas/new" for 127.0.0.1 at 2016-11-10 16:37:45 -0200
+Processing by TransacaoEntradasController#new as HTML
+  Rendered transacao_entradas/_form.html.erb (12.5ms)
+  Rendered transacao_entradas/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 59ms (Views: 57.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/transacao_entradas" for 127.0.0.1 at 2016-11-10 16:37:45 -0200
+Processing by TransacaoEntradasController#index as HTML
+  [1m[36mTransacaoEntrada Load (0.2ms)[0m  [1mSELECT `transacao_entradas`.* FROM `transacao_entradas`[0m
+  Rendered transacao_entradas/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 76ms (Views: 74.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/transacao_saidas" for 127.0.0.1 at 2016-11-10 16:37:46 -0200
+Processing by TransacaoSaidasController#index as HTML
+  [1m[35mTransacaoSaida Load (0.3ms)[0m  SELECT `transacao_saidas`.* FROM `transacao_saidas`
+  Rendered transacao_saidas/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 53ms (Views: 52.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/transacao_saidas/new" for 127.0.0.1 at 2016-11-10 16:37:47 -0200
+Processing by TransacaoSaidasController#new as HTML
+  Rendered transacao_saidas/_form.html.erb (15.0ms)
+  Rendered transacao_saidas/new.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 83ms (Views: 81.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/transacao_entradas" for 127.0.0.1 at 2016-11-10 16:37:49 -0200
+Processing by TransacaoEntradasController#index as HTML
+  [1m[36mTransacaoEntrada Load (0.2ms)[0m  [1mSELECT `transacao_entradas`.* FROM `transacao_entradas`[0m
+  Rendered transacao_entradas/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 69ms (Views: 67.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/transacao_entradas/new" for 127.0.0.1 at 2016-11-10 16:37:50 -0200
+Processing by TransacaoEntradasController#new as HTML
+  Rendered transacao_entradas/_form.html.erb (14.6ms)
+  Rendered transacao_entradas/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 85ms (Views: 84.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/transacao_entradas" for 127.0.0.1 at 2016-11-10 16:37:51 -0200
+Processing by TransacaoEntradasController#index as HTML
+  [1m[35mTransacaoEntrada Load (0.2ms)[0m  SELECT `transacao_entradas`.* FROM `transacao_entradas`
+  Rendered transacao_entradas/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 63ms (Views: 61.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/transacao_saidas/new" for 127.0.0.1 at 2016-11-10 16:37:52 -0200
+Processing by TransacaoSaidasController#new as HTML
+  Rendered transacao_saidas/_form.html.erb (24.9ms)
+  Rendered transacao_saidas/new.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 93ms (Views: 92.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/transacao_entradas/new" for 127.0.0.1 at 2016-11-10 16:37:53 -0200
+Processing by TransacaoEntradasController#new as HTML
+  Rendered transacao_entradas/_form.html.erb (13.6ms)
+  Rendered transacao_entradas/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 83ms (Views: 81.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2016-11-10 16:37:57 -0200
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 56ms (Views: 55.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2016-11-10 16:38:09 -0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qNT2Vh/0bAEvXOr5kj4UIXihdeN358Bb0KmlgWeYvF3fGf9s4rgcEqtHHO0rt5/J4QhfhZGy2hWSZyWBxtZ2bg==", "email"=>"admin@admin.com.br", "senha"=>"admin", "commit"=>"Log In"}
+  [1m[36mSocio Load (0.3ms)[0m  [1mSELECT  `socios`.* FROM `socios` WHERE `socios`.`email` = 'admin@admin.com.br' LIMIT 1[0m
+Redirected to http://localhost:3000/socios
+Completed 302 Found in 87ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/socios" for 127.0.0.1 at 2016-11-10 16:38:09 -0200
+Processing by SociosController#index as HTML
+  [1m[35mSocio Load (0.3ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+  [1m[36mSocio Load (0.2ms)[0m  [1mSELECT `socios`.* FROM `socios`[0m
+  Rendered socios/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/transacao_entradas/new" for 127.0.0.1 at 2016-11-10 16:38:14 -0200
+Processing by TransacaoEntradasController#new as HTML
+  Rendered transacao_entradas/_form.html.erb (12.4ms)
+  Rendered transacao_entradas/new.html.erb within layouts/application (13.4ms)
+  [1m[35mSocio Load (0.1ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+Completed 200 OK in 67ms (Views: 66.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/transacao_entradas" for 127.0.0.1 at 2016-11-10 16:38:15 -0200
+Processing by TransacaoEntradasController#index as HTML
+  [1m[36mTransacaoEntrada Load (0.2ms)[0m  [1mSELECT `transacao_entradas`.* FROM `transacao_entradas`[0m
+  Rendered transacao_entradas/index.html.erb within layouts/application (0.9ms)
+  [1m[35mSocio Load (0.1ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+Completed 200 OK in 65ms (Views: 63.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/transacao_saidas/new" for 127.0.0.1 at 2016-11-10 16:38:16 -0200
+Processing by TransacaoSaidasController#new as HTML
+  Rendered transacao_saidas/_form.html.erb (14.0ms)
+  Rendered transacao_saidas/new.html.erb within layouts/application (15.0ms)
+  [1m[36mSocio Load (0.2ms)[0m  [1mSELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 69ms (Views: 67.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/transacao_saidas" for 127.0.0.1 at 2016-11-10 16:38:17 -0200
+Processing by TransacaoSaidasController#index as HTML
+  [1m[35mTransacaoSaida Load (0.2ms)[0m  SELECT `transacao_saidas`.* FROM `transacao_saidas`
+  Rendered transacao_saidas/index.html.erb within layouts/application (1.0ms)
+  [1m[36mSocio Load (0.2ms)[0m  [1mSELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 57ms (Views: 55.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/transacao_entradas/new" for 127.0.0.1 at 2016-11-10 16:38:18 -0200
+Processing by TransacaoEntradasController#new as HTML
+  Rendered transacao_entradas/_form.html.erb (12.4ms)
+  Rendered transacao_entradas/new.html.erb within layouts/application (13.5ms)
+  [1m[35mSocio Load (0.2ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+Completed 200 OK in 80ms (Views: 79.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/transacao_entradas" for 127.0.0.1 at 2016-11-10 16:38:23 -0200
+Processing by TransacaoEntradasController#index as HTML
+  [1m[36mTransacaoEntrada Load (0.2ms)[0m  [1mSELECT `transacao_entradas`.* FROM `transacao_entradas`[0m
+  Rendered transacao_entradas/index.html.erb within layouts/application (1.2ms)
+  [1m[35mSocio Load (0.1ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+Completed 200 OK in 79ms (Views: 78.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/transacao_saidas/new" for 127.0.0.1 at 2016-11-10 16:38:24 -0200
+Processing by TransacaoSaidasController#new as HTML
+  Rendered transacao_saidas/_form.html.erb (12.1ms)
+  Rendered transacao_saidas/new.html.erb within layouts/application (13.1ms)
+  [1m[36mSocio Load (0.1ms)[0m  [1mSELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 89ms (Views: 87.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/transacao_saidas" for 127.0.0.1 at 2016-11-10 16:38:25 -0200
+Processing by TransacaoSaidasController#index as HTML
+  [1m[35mTransacaoSaida Load (0.2ms)[0m  SELECT `transacao_saidas`.* FROM `transacao_saidas`
+  Rendered transacao_saidas/index.html.erb within layouts/application (1.0ms)
+  [1m[36mSocio Load (0.2ms)[0m  [1mSELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 70ms (Views: 68.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/transacao_entradas/new" for 127.0.0.1 at 2016-11-10 16:38:27 -0200
+Processing by TransacaoEntradasController#new as HTML
+  Rendered transacao_entradas/_form.html.erb (17.9ms)
+  Rendered transacao_entradas/new.html.erb within layouts/application (19.4ms)
+  [1m[35mSocio Load (0.2ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+Completed 200 OK in 86ms (Views: 85.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/transacao_entradas" for 127.0.0.1 at 2016-11-10 16:38:50 -0200
+Processing by TransacaoEntradasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FLihPGUel8JlLfokDsMjhRH3onjwrDFLrjg9sgo3Sv5jdagGmFLn0eE2DDC3SqhtiF6IHhb5KwXs9r2yq3mAzQ==", "transacao_entrada"=>{"valor"=>"52,52", "data_entrada(1i)"=>"2016", "data_entrada(2i)"=>"11", "data_entrada(3i)"=>"10", "justifica_entrada"=>"dsadsadasdsad", "tipo"=>"Outro", "created_at(1i)"=>"2016", "created_at(2i)"=>"11", "created_at(3i)"=>"10", "created_at(4i)"=>"18", "created_at(5i)"=>"38", "updated_at(1i)"=>"2016", "updated_at(2i)"=>"11", "updated_at(3i)"=>"10", "updated_at(4i)"=>"18", "updated_at(5i)"=>"38"}, "commit"=>"Concluir"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `transacao_entradas` (`valor`, `justifica_entrada`, `tipo`, `data_entrada`, `created_at`, `updated_at`) VALUES (52.0, 'dsadsadasdsad', 'Outro', '2016-11-10', '2016-11-10 18:38:00', '2016-11-10 18:38:00')
+  [1m[36m (155.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/transacao_entradas/1
+Completed 302 Found in 161ms (ActiveRecord: 156.1ms)
+
+
+Started GET "/transacao_entradas/1" for 127.0.0.1 at 2016-11-10 16:38:50 -0200
+Processing by TransacaoEntradasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTransacaoEntrada Load (0.5ms)[0m  SELECT  `transacao_entradas`.* FROM `transacao_entradas` WHERE `transacao_entradas`.`id` = 1 LIMIT 1
+  Rendered transacao_entradas/show.html.erb within layouts/application (1.0ms)
+  [1m[36mSocio Load (0.2ms)[0m  [1mSELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 75ms (Views: 72.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/transacao_entradas/new" for 127.0.0.1 at 2016-11-10 16:38:53 -0200
+Processing by TransacaoEntradasController#new as HTML
+  Rendered transacao_entradas/_form.html.erb (12.7ms)
+  Rendered transacao_entradas/new.html.erb within layouts/application (13.5ms)
+  [1m[35mSocio Load (0.2ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+Completed 200 OK in 67ms (Views: 66.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/transacao_entradas" for 127.0.0.1 at 2016-11-10 16:38:54 -0200
+Processing by TransacaoEntradasController#index as HTML
+  [1m[36mTransacaoEntrada Load (0.6ms)[0m  [1mSELECT `transacao_entradas`.* FROM `transacao_entradas`[0m
+  Rendered transacao_entradas/index.html.erb within layouts/application (2.2ms)
+  [1m[35mSocio Load (0.2ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+Completed 200 OK in 69ms (Views: 67.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/transacao_saidas/new" for 127.0.0.1 at 2016-11-10 16:38:59 -0200
+Processing by TransacaoSaidasController#new as HTML
+  Rendered transacao_saidas/_form.html.erb (14.7ms)
+  Rendered transacao_saidas/new.html.erb within layouts/application (15.7ms)
+  [1m[36mSocio Load (0.1ms)[0m  [1mSELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 65ms (Views: 64.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/transacao_entradas/new" for 127.0.0.1 at 2016-11-10 16:39:11 -0200
+Processing by TransacaoEntradasController#new as HTML
+  Rendered transacao_entradas/_form.html.erb (16.3ms)
+  Rendered transacao_entradas/new.html.erb within layouts/application (17.1ms)
+  [1m[35mSocio Load (0.2ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+Completed 200 OK in 84ms (Views: 82.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/transacao_entradas" for 127.0.0.1 at 2016-11-10 16:39:12 -0200
+Processing by TransacaoEntradasController#index as HTML
+  [1m[36mTransacaoEntrada Load (0.2ms)[0m  [1mSELECT `transacao_entradas`.* FROM `transacao_entradas`[0m
+  Rendered transacao_entradas/index.html.erb within layouts/application (1.7ms)
+  [1m[35mSocio Load (0.2ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+Completed 200 OK in 69ms (Views: 68.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/transacao_entradas/new" for 127.0.0.1 at 2016-11-10 16:39:13 -0200
+Processing by TransacaoEntradasController#new as HTML
+  Rendered transacao_entradas/_form.html.erb (16.6ms)
+  Rendered transacao_entradas/new.html.erb within layouts/application (17.7ms)
+  [1m[36mSocio Load (0.2ms)[0m  [1mSELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 83ms (Views: 82.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/transacao_entradas" for 127.0.0.1 at 2016-11-10 16:39:19 -0200
+Processing by TransacaoEntradasController#index as HTML
+  [1m[35mTransacaoEntrada Load (0.2ms)[0m  SELECT `transacao_entradas`.* FROM `transacao_entradas`
+  Rendered transacao_entradas/index.html.erb within layouts/application (2.0ms)
+  [1m[36mSocio Load (0.1ms)[0m  [1mSELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 83ms (Views: 82.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/transacao_saidas/new" for 127.0.0.1 at 2016-11-10 16:39:20 -0200
+Processing by TransacaoSaidasController#new as HTML
+  Rendered transacao_saidas/_form.html.erb (14.8ms)
+  Rendered transacao_saidas/new.html.erb within layouts/application (15.8ms)
+  [1m[35mSocio Load (0.2ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+Completed 200 OK in 101ms (Views: 100.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/transacao_entradas" for 127.0.0.1 at 2016-11-10 16:39:22 -0200
+Processing by TransacaoEntradasController#index as HTML
+  [1m[36mTransacaoEntrada Load (0.2ms)[0m  [1mSELECT `transacao_entradas`.* FROM `transacao_entradas`[0m
+  Rendered transacao_entradas/index.html.erb within layouts/application (2.1ms)
+  [1m[35mSocio Load (0.2ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+Completed 200 OK in 77ms (Views: 76.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/transacao_saidas" for 127.0.0.1 at 2016-11-10 16:39:24 -0200
+Processing by TransacaoSaidasController#index as HTML
+  [1m[36mTransacaoSaida Load (0.2ms)[0m  [1mSELECT `transacao_saidas`.* FROM `transacao_saidas`[0m
+  Rendered transacao_saidas/index.html.erb within layouts/application (0.9ms)
+  [1m[35mSocio Load (0.1ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+Completed 200 OK in 57ms (Views: 55.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/transacao_saidas/new" for 127.0.0.1 at 2016-11-10 16:39:25 -0200
+Processing by TransacaoSaidasController#new as HTML
+  Rendered transacao_saidas/_form.html.erb (15.1ms)
+  Rendered transacao_saidas/new.html.erb within layouts/application (15.9ms)
+  [1m[36mSocio Load (0.2ms)[0m  [1mSELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 83ms (Views: 82.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/transacao_entradas" for 127.0.0.1 at 2016-11-10 16:39:26 -0200
+Processing by TransacaoEntradasController#index as HTML
+  [1m[35mTransacaoEntrada Load (0.2ms)[0m  SELECT `transacao_entradas`.* FROM `transacao_entradas`
+  Rendered transacao_entradas/index.html.erb within layouts/application (1.7ms)
+  [1m[36mSocio Load (0.1ms)[0m  [1mSELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 83ms (Views: 81.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/transacao_entradas/1" for 127.0.0.1 at 2016-11-10 16:39:30 -0200
+Processing by TransacaoEntradasController#destroy as HTML
+  Parameters: {"authenticity_token"=>"o+Q6JesZ1xp/C6TYR7LHPJB4ptQsw1N04k/MkCG3pFzUKTMfFlWnCfsQUsz+O0zUCdGMssqWSTqggUyQgPlubw==", "id"=>"1"}
+  [1m[35mTransacaoEntrada Load (0.2ms)[0m  SELECT  `transacao_entradas`.* FROM `transacao_entradas` WHERE `transacao_entradas`.`id` = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 1.5ms)
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Table 'financeiro_development.mensalidades_transacao_entradas' doesn't exist: SHOW FULL FIELDS FROM `mensalidades_transacao_entradas`):
+  app/controllers/transacao_entradas_controller.rb:57:in `destroy'
+
+
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.1ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.2ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (35.5ms)
+
+
+Started GET "/transacao_entradas" for 127.0.0.1 at 2016-11-10 16:39:46 -0200
+Processing by TransacaoEntradasController#index as HTML
+  [1m[36mTransacaoEntrada Load (0.2ms)[0m  [1mSELECT `transacao_entradas`.* FROM `transacao_entradas`[0m
+  Rendered transacao_entradas/index.html.erb within layouts/application (1.3ms)
+  [1m[35mSocio Load (0.2ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+Completed 200 OK in 59ms (Views: 57.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/login.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/scaffolds.self-a9c357899ce8c7dfd8500f96406ce1b209c8d5877afda99545d06c8eaf5b1980.css?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/socios.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/transacao_entradas.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/transacao_saidas.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/twitter/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/login.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/socios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/transacao_entradas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/transacao_saidas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-10 16:39:47 -0200
+
+
+Started GET "/transacao_entradas/new" for 127.0.0.1 at 2016-11-10 16:39:48 -0200
+Processing by TransacaoEntradasController#new as HTML
+  Rendered transacao_entradas/_form.html.erb (14.3ms)
+  Rendered transacao_entradas/new.html.erb within layouts/application (15.1ms)
+  [1m[36mSocio Load (0.1ms)[0m  [1mSELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 68ms (Views: 67.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/transacao_entradas" for 127.0.0.1 at 2016-11-10 16:39:49 -0200
+Processing by TransacaoEntradasController#index as HTML
+  [1m[35mTransacaoEntrada Load (1.0ms)[0m  SELECT `transacao_entradas`.* FROM `transacao_entradas`
+  Rendered transacao_entradas/index.html.erb within layouts/application (2.8ms)
+  [1m[36mSocio Load (0.2ms)[0m  [1mSELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 83ms (Views: 80.8ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/transacao_entradas/1" for 127.0.0.1 at 2016-11-10 16:39:53 -0200
+Processing by TransacaoEntradasController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iAqwf5TAu8ci3jiyMw0ZQiiX2vr7czm/AQMfS11temX/x7lFaYzL1KbFzqaKhJKqsT7wnB0mI/FDzZ9L/COwVg==", "id"=>"1"}
+  [1m[35mTransacaoEntrada Load (0.1ms)[0m  SELECT  `transacao_entradas`.* FROM `transacao_entradas` WHERE `transacao_entradas`.`id` = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 1.2ms)
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Table 'financeiro_development.mensalidades_transacao_entradas' doesn't exist: SHOW FULL FIELDS FROM `mensalidades_transacao_entradas`):
+  app/controllers/transacao_entradas_controller.rb:57:in `destroy'
+
+
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.8ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (45.4ms)
+
+
+Started GET "/socios" for 127.0.0.1 at 2016-11-10 16:51:26 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by SociosController#index as HTML
+  [1m[35mSocio Load (0.1ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+  [1m[36mSocio Load (0.1ms)[0m  [1mSELECT `socios`.* FROM `socios`[0m
+  Rendered socios/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 443ms (Views: 419.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2016-11-10 16:51:30 -0200
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2016-11-10 16:51:30 -0200
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 47ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/socios" for 127.0.0.1 at 2016-11-10 16:51:35 -0200
+Processing by SociosController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/socios" for 127.0.0.1 at 2016-11-10 16:51:35 -0200
+Processing by SociosController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2016-11-10 16:51:35 -0200
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 69ms (Views: 68.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/transacao_entradas/new" for 127.0.0.1 at 2016-11-10 16:51:45 -0200
+Processing by TransacaoEntradasController#new as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2016-11-10 16:51:45 -0200
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 48ms (Views: 47.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/transacao_entradas/new" for 127.0.0.1 at 2016-11-10 16:51:52 -0200
+Processing by TransacaoEntradasController#new as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2016-11-10 16:51:52 -0200
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 51ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/transacao_saidas/new" for 127.0.0.1 at 2016-11-10 16:52:03 -0200
+Processing by TransacaoSaidasController#new as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2016-11-10 16:52:03 -0200
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 51ms (Views: 50.4ms | ActiveRecord: 0.0ms)

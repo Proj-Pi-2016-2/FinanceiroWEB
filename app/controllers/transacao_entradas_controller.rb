@@ -1,5 +1,6 @@
 class TransacaoEntradasController < ApplicationController
   before_action :set_transacao_entrada, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /transacao_entradas
   # GET /transacao_entradas.json
