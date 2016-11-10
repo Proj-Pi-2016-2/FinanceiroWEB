@@ -35,13 +35,6 @@ ActiveRecord::Schema.define(version: 20161102224351) do
     t.datetime "updated_at",            null: false
   end
 
-  create_table "mensalidades", force: :cascade do |t|
-    t.date     "data_entrada"
-    t.string   "justifica_entrada", limit: 200
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
-  end
-
   create_table "socios", force: :cascade do |t|
     t.string   "nome",            limit: 255
     t.integer  "cpf",             limit: 8
