@@ -45566,3 +45566,503 @@ Processing by TransacaoSaidasController#index as HTML
   [1m[36mTransacaoSaida Load (0.2ms)[0m  [1mSELECT `transacao_saidas`.* FROM `transacao_saidas`[0m
   Rendered transacao_saidas/index.html.erb within layouts/application (3.0ms)
 Completed 200 OK in 58ms (Views: 54.7ms | ActiveRecord: 0.7ms)
+  [1m[36m (81.4ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (188.0ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateCadeiras (20160915102706)
+  [1m[35m (77.1ms)[0m  CREATE TABLE `cadeiras` (`id` int(11) auto_increment PRIMARY KEY, `cadeira` int(11) NOT NULL, `data_posse` date, `data_saida` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160915102706')
+  [1m[36m (35.2ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCadeiraSocios (20160915102722)
+  [1m[35m (66.2ms)[0m  CREATE TABLE `cadeira_socios` (`id` int(11) auto_increment PRIMARY KEY, `cpf` int(11), `cadeira` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160915102722')
+  [1m[36m (31.8ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCaixas (20160915102731)
+  [1m[35m (66.2ms)[0m  CREATE TABLE `caixas` (`id` int(11) auto_increment PRIMARY KEY, `data_caixa` date, `saldo` float, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160915102731')
+  [1m[36m (31.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMensalidades (20160915102739)
+  [1m[35m (65.9ms)[0m  CREATE TABLE `mensalidades` (`id` int(11) auto_increment PRIMARY KEY, `data_entrada` date, `justifica_entrada` varchar(200), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160915102739')
+  [1m[36m (31.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSocios (20160928200918)
+  [1m[35m (66.2ms)[0m  CREATE TABLE `socios` (`id` int(11) auto_increment PRIMARY KEY, `nome` varchar(255), `cpf` int(11), `email` varchar(255), `telefone` int(11), `endereco` varchar(255), `dataNascimento` date, `sexo` varchar(255), `cadeira` int(11), `password_digest` varchar(255), `permissao` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160928200918')
+  [1m[36m (31.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTransacaoEntradas (20161101224807)
+  [1m[35m (67.3ms)[0m  CREATE TABLE `transacao_entradas` (`id` int(11) auto_increment PRIMARY KEY, `valor` float, `data_entrada` date, `justifica_entrada` varchar(255), `tipo` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161101224807')
+  [1m[36m (31.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTransacaoSaidas (20161101234553)
+  [1m[35m (66.0ms)[0m  CREATE TABLE `transacao_saidas` (`id` int(11) auto_increment PRIMARY KEY, `valor` float, `data_saida` date, `justifica_saida` varchar(255), `img_comprov_file_name` varchar(255), `img_comprov_content_type` varchar(255), `img_comprov_file_size` int(11), `img_comprov_updated_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161101234553')
+  [1m[36m (42.8ms)[0m  [1mCOMMIT[0m
+Migrating to ChangeLimitCpftoEight (20161102224351)
+  [1m[35m (221.4ms)[0m  ALTER TABLE `socios` CHANGE `cpf` `cpf` bigint DEFAULT NULL
+  [1m[36m (167.2ms)[0m  [1mALTER TABLE `cadeira_socios` CHANGE `cpf` `cpf` bigint DEFAULT NULL[0m
+  [1m[35m (166.9ms)[0m  ALTER TABLE `socios` CHANGE `telefone` `telefone` bigint DEFAULT NULL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161102224351')
+  [1m[36m (31.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'cadeira_socios'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `cadeira_socios`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'cadeiras'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `cadeiras`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'caixas'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `caixas`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'mensalidades'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `mensalidades`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'socios'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `socios`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'transacao_entradas'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `transacao_entradas`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'transacao_saidas'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `transacao_saidas`
+  [1m[36mSocio Load (0.3ms)[0m  [1mSELECT  `socios`.* FROM `socios`  ORDER BY `socios`.`id` ASC LIMIT 1[0m
+  [1m[35mSocio Load (0.4ms)[0m  SELECT  `socios`.* FROM `socios`  ORDER BY `socios`.`id` ASC LIMIT 1
+  [1m[36mSocio Load (0.5ms)[0m  [1mSELECT  `socios`.* FROM `socios`  ORDER BY `socios`.`id` ASC LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSocio Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `socios` WHERE `socios`.`cpf` = BINARY 99999999999 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mSocio Load (0.2ms)[0m  [1mSELECT  `socios`.* FROM `socios`  ORDER BY `socios`.`id` ASC LIMIT 1[0m
+  [1m[35mSocio Load (0.5ms)[0m  SELECT  `socios`.* FROM `socios`  ORDER BY `socios`.`id` ASC LIMIT 1
+  [1m[36mSocio Load (0.4ms)[0m  [1mSELECT  `socios`.* FROM `socios`  ORDER BY `socios`.`id` ASC LIMIT 1[0m
+  [1m[35mSocio Load (0.4ms)[0m  SELECT  `socios`.* FROM `socios`  ORDER BY `socios`.`id` ASC LIMIT 1
+  [1m[36mSocio Load (0.4ms)[0m  [1mSELECT  `socios`.* FROM `socios`  ORDER BY `socios`.`id` ASC LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSocio Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `socios` WHERE `socios`.`cpf` = BINARY 99999999999 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mSocio Load (0.1ms)[0m  [1mSELECT  `socios`.* FROM `socios`  ORDER BY `socios`.`id` ASC LIMIT 1[0m
+  [1m[35mSocio Load (0.3ms)[0m  SELECT  `socios`.* FROM `socios`  ORDER BY `socios`.`id` ASC LIMIT 1
+  [1m[36mSocio Load (0.5ms)[0m  [1mSELECT  `socios`.* FROM `socios`  ORDER BY `socios`.`id` ASC LIMIT 1[0m
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSocio Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `socios` WHERE `socios`.`cpf` = BINARY 99999999999 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mSocio Load (0.2ms)[0m  [1mSELECT  `socios`.* FROM `socios`  ORDER BY `socios`.`id` ASC LIMIT 1[0m
+  [1m[35mSocio Load (0.2ms)[0m  SELECT  `socios`.* FROM `socios`  ORDER BY `socios`.`id` ASC LIMIT 1
+  [1m[36mSocio Load (0.2ms)[0m  [1mSELECT  `socios`.* FROM `socios`  ORDER BY `socios`.`id` ASC LIMIT 1[0m
+  [1m[35mSocio Load (0.5ms)[0m  SELECT  `socios`.* FROM `socios`  ORDER BY `socios`.`id` ASC LIMIT 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSocio Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `socios` WHERE `socios`.`cpf` = BINARY 34811558839 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `socios` (`nome`, `cpf`, `email`, `telefone`, `endereco`, `sexo`, `cadeira`, `password_digest`, `permissao`, `created_at`, `updated_at`) VALUES ('admin', 34811558839, 'admin@admin.com.br', 4499999999, 'rua avenida', 'm', 2, '$2a$10$PXi32ImomR7.4Ka0Jq57AulTFsNmor9obV4L.2OQXRjMErVRedrDq', 1, '2016-11-10 05:01:17', '2016-11-10 05:01:17')
+  [1m[36m (33.6ms)[0m  [1mCOMMIT[0m
+  [1m[36mSocio Load (0.3ms)[0m  [1mSELECT  `socios`.* FROM `socios`  ORDER BY `socios`.`id` ASC LIMIT 1[0m
+
+
+Started GET "/socios" for 127.0.0.1 at 2016-11-10 03:17:55 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+SyntaxError (/home/golom/Documentos/ProjetoIntegrador/vesaogit/FinanceiroWEB/app/controllers/application_controller.rb:25: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/controllers/application_controller.rb:25: syntax error, unexpected keyword_end, expecting end-of-input
+  app/controllers/socios_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.0ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.5ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (26.7ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (47.6ms)
+
+
+Started GET "/socios" for 127.0.0.1 at 2016-11-10 03:17:55 -0200
+
+SyntaxError (/home/golom/Documentos/ProjetoIntegrador/vesaogit/FinanceiroWEB/app/controllers/application_controller.rb:25: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/controllers/application_controller.rb:25: syntax error, unexpected keyword_end, expecting end-of-input
+  app/controllers/socios_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.9ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.0ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (35.1ms)
+
+
+Started GET "/socios" for 127.0.0.1 at 2016-11-10 03:18:29 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by SociosController#index as HTML
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `logged_in?' for #<SociosController:0x00000004495828>
+Did you mean?  logger):
+  app/controllers/application_controller.rb:20:in `authorize'
+
+
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.7ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (40.9ms)
+
+
+Started GET "/socios" for 127.0.0.1 at 2016-11-10 03:20:18 -0200
+Processing by SociosController#index as HTML
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `logged_in?' for #<SociosController:0x000000041edf80>
+Did you mean?  logger):
+  app/controllers/application_controller.rb:20:in `authorize'
+
+
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.9ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.9ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.0ms)
+
+
+Started GET "/socios" for 127.0.0.1 at 2016-11-10 03:20:25 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by SociosController#index as HTML
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `logged_in?' for #<SociosController:0x00000005208bb8>
+Did you mean?  logger):
+  app/controllers/application_controller.rb:20:in `authorize'
+
+
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.7ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (20.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (39.8ms)
+
+
+Started GET "/socios" for 127.0.0.1 at 2016-11-10 03:20:27 -0200
+Processing by SociosController#index as HTML
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `logged_in?' for #<SociosController:0x00000004bdf200>
+Did you mean?  logger):
+  app/controllers/application_controller.rb:20:in `authorize'
+
+
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.2ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.8ms)
+
+
+Started GET "/socios" for 127.0.0.1 at 2016-11-10 03:21:10 -0200
+Processing by SociosController#index as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `logged_in?' for #<SociosController:0x007fd600e68740>
+Did you mean?  logger):
+  app/controllers/application_controller.rb:20:in `authorize'
+
+
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.5ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.2ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2016-11-10 03:21:14 -0200
+Processing by SessionsController#new as HTML
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `block_access' for #<SessionsController:0x00000004ff2270>):
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:432:in `block in make_lambda'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:145:in `block in halting_and_conditional'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:504:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:504:in `each'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.7.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.7.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.7.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.7.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.7.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.7.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.7.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.7.1) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.7.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.7.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.7.1) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.7.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/golom/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/golom/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/golom/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.7ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (37.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2016-11-10 03:22:16 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 460ms (Views: 451.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2016-11-10 03:22:18 -0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZxVwbvZZlAkD6poAnIj8y3ApGOi5PbimDfmQaoj/Kk4Q2HlUCxXkGofxbBQlAXcj6YAyjl9oouhPNxBqKbHgfQ==", "email"=>"golom@lo.com", "senha"=>"marcos", "commit"=>"Log In"}
+  [1m[35mSocio Load (0.6ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`email` = 'golom@lo.com' LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 84ms (Views: 73.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2016-11-10 03:22:27 -0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2a3FLxot6NqbUgB+02+UJOEikH+k56hyNOtAB1owGImuYMwV52GYyR9J9mpq5h/MeIu6GUKysjx2JcAH+37Sug==", "email"=>"admin@admin.com", "senha"=>"admin", "commit"=>"Log In"}
+  [1m[36mSocio Load (0.3ms)[0m  [1mSELECT  `socios`.* FROM `socios` WHERE `socios`.`email` = 'admin@admin.com' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 60ms (Views: 58.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2016-11-10 03:22:34 -0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ucnxWQTqmNLFcrxy0lIqj0ILw0gOJmkEhZCBdDQI8krOBPhj+abowUFpSmZr26Fn26LpLuhzc0rHXgF0lUY4eQ==", "email"=>"admin@admin.com.br", "senha"=>"admin", "commit"=>"Log In"}
+  [1m[35mSocio Load (0.4ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`email` = 'admin@admin.com.br' LIMIT 1
+Redirected to http://localhost:3000/socios
+Completed 302 Found in 92ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/socios" for 127.0.0.1 at 2016-11-10 03:22:34 -0200
+Processing by SociosController#index as HTML
+  [1m[36mSocio Load (0.3ms)[0m  [1mSELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1[0m
+  [1m[35mSocio Load (0.3ms)[0m  SELECT `socios`.* FROM `socios`
+  Rendered socios/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 60ms (Views: 57.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/socios/new" for 127.0.0.1 at 2016-11-10 03:22:49 -0200
+Processing by SociosController#new as HTML
+  [1m[36mSocio Load (0.2ms)[0m  [1mSELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1[0m
+  Rendered socios/_form.html.erb (32.1ms)
+  Rendered socios/new.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 83ms (Views: 81.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/socios" for 127.0.0.1 at 2016-11-10 03:23:06 -0200
+Processing by SociosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4lurHH+szjB67Dhx6dBiPPp6N6t0TCV0q2O1DQLJ59CVlqImguC+I/73zmVQWenUY9MdzZIZPzrprTUNo4ct4w==", "socio"=>{"nome"=>"Marcos vinicius Golom", "cpf"=>"82899926616", "email"=>"viniciusgolom@gmail.com", "telefone"=>"4435291704", "endereco"=>"RUA AVENIDA", "dataNascimento(1i)"=>"2016", "dataNascimento(2i)"=>"11", "dataNascimento(3i)"=>"10", "sexo"=>"Masculino", "cadeira"=>"5", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "permissao"=>"1", "created_at(1i)"=>"2016", "created_at(2i)"=>"11", "created_at(3i)"=>"10", "created_at(4i)"=>"05", "created_at(5i)"=>"22", "updated_at(1i)"=>"2016", "updated_at(2i)"=>"11", "updated_at(3i)"=>"10", "updated_at(4i)"=>"05", "updated_at(5i)"=>"22"}, "commit"=>"Concluir"}
+  [1m[35mSocio Load (0.1ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSocio Exists (0.3ms)[0m  SELECT  1 AS one FROM `socios` WHERE `socios`.`cpf` = BINARY 82899926616 LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `socios` (`nome`, `cpf`, `email`, `telefone`, `endereco`, `sexo`, `cadeira`, `password_digest`, `permissao`, `dataNascimento`, `created_at`, `updated_at`) VALUES ('Marcos vinicius Golom', 82899926616, 'viniciusgolom@gmail.com', 4435291704, 'RUA AVENIDA', 'Masculino', 5, '$2a$10$Xi3f8ncLyzQUbQCV88wTmO81L.cCXISF7Nc8y9y2mD9AVX4.eLZIa', 1, '2016-11-10', '2016-11-10 05:22:00', '2016-11-10 05:22:00')[0m
+  [1m[35m (133.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/socios/2
+Completed 302 Found in 241ms (ActiveRecord: 134.7ms)
+
+
+Started GET "/socios/2" for 127.0.0.1 at 2016-11-10 03:23:06 -0200
+Processing by SociosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSocio Load (0.3ms)[0m  [1mSELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 2 LIMIT 1[0m
+  [1m[35mSocio Load (0.2ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+  Rendered socios/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 54ms (Views: 52.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2016-11-10 03:23:14 -0200
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2016-11-10 03:23:14 -0200
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 64ms (Views: 63.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2016-11-10 03:23:24 -0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YilR4QZWv0VjtZhk4Z1eWuk3xzbSxcJF5Hk25GQfI1oV5Fjb+xrPVueubnBYFNWycJ7tUDSQ2Aumt7bkxVHpaQ==", "email"=>"viniciusgolom@gmail.com", "senha"=>"golom", "commit"=>"Log In"}
+  [1m[36mSocio Load (0.3ms)[0m  [1mSELECT  `socios`.* FROM `socios` WHERE `socios`.`email` = 'viniciusgolom@gmail.com' LIMIT 1[0m
+Redirected to http://localhost:3000/socios
+Completed 302 Found in 88ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/socios" for 127.0.0.1 at 2016-11-10 03:23:24 -0200
+Processing by SociosController#index as HTML
+  [1m[35mSocio Load (0.1ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 2 LIMIT 1
+  [1m[36mSocio Load (0.3ms)[0m  [1mSELECT `socios`.* FROM `socios`[0m
+  Rendered socios/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 61ms (Views: 60.1ms | ActiveRecord: 0.4ms)
