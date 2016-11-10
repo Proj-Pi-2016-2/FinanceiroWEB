@@ -2,14 +2,14 @@ Rails.application.routes.draw do
 
   resources :transacao_saidas
   resources :transacao_saidas
-  
+
   resources :transacao_entradas
 
   resources :socios
   resources :sessions
   get 'home/index'
 
-
+  root :to => redirect("/login")
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
 

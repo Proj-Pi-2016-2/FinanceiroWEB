@@ -46785,3 +46785,4 @@ Started GET "/login" for 127.0.0.1 at 2016-11-10 16:52:03 -0200
 Processing by SessionsController#new as HTML
   Rendered sessions/new.html.erb within layouts/application (0.7ms)
 Completed 200 OK in 51ms (Views: 50.4ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: Defining a route where `to` is a controller without an action is deprecated. Please change `to: 'login'` to `controller: 'login'`. (called from block in <top (required)> at /home/itsgnegrao/Github/FinanceiroWEB/config/routes.rb:12)

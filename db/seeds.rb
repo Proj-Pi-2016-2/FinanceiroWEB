@@ -5,4 +5,4 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-	Socio.create(nome:'admin', cpf:34811558839, email:'admin@admin.com.br', telefone:4499999999, endereco:'rua avenida', sexo:'m', cadeira:2, password:'admin', password_confirmation:'admin', permissao:1)
+	Socio.create(nome:'admin', cpf:34811558839, email:'admin@admin.com.br', telefone:4499999999, endereco:'rua avenida', sexo:'m', cadeira:0, password:'admin', password_confirmation:'admin', permissao:1)
