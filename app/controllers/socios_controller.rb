@@ -1,6 +1,6 @@
 class SociosController < ApplicationController
   before_action :set_socio, only: [:show, :edit, :update, :destroy]
-  #before_action :authenticate_user!
+  before_action :authenticate_user!
 
   # GET /socios
   # GET /socios.json
@@ -70,6 +70,6 @@ class SociosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def socio_params
-      params.require(:socio).permit(:nome, :cpf, :email, :telefone, :endereco, :dataNascimento, :sexo, :cadeira, :senha, :permissao, :created_at, :updated_at)
+      params.require(:socio).permit(:nome, :cpf, :email, :telefone, :endereco, :dataNascimento, :sexo, :cadeira, :password, :password_confirmation, :permissao, :created_at, :updated_at)
     end
 end

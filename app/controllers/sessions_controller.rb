@@ -5,14 +5,15 @@ class SessionsController < ApplicationController
  end
  
  def create
- 	user = Socio.find_by(email: params[:eemail])
- 	if user #&& user.authenticate(params[:senha])
- 		session[:id] = user.id
- 		redirect_to socios_path, notice: "Logado com sucesso!"
- 	else
- 		flash.now.alert = "Email ou Senha invalida"
- 		render "new"
- 	end
+ 	user = Socio.find_by(email: params[:email])
+ 		if user && user.authenticate(params[:senha])
+ 			session[:id] = user.id
+ 			redirect_to socios_path, notice: "Logado com sucesso!"
+ 		else
+ 			flash.now.alert = "Email ou Senha invalida"
+ 			render "new"
+ 		end
+
  end
  
  def destroy

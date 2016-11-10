@@ -9,7 +9,7 @@ class CreateSocios < ActiveRecord::Migration
       t.date :dataNascimento
       t.string :sexo
       t.integer :cadeira
-      t.string :senha
+      t.string :password_digest
       t.integer :permissao
       t.datetime :created_at
       t.datetime :updated_at

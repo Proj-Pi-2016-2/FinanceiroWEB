@@ -1,4 +1,6 @@
 class Socio < ActiveRecord::Base
+  has_secure_password
+  
   validates_presence_of :cpf
   validates_length_of :cpf, :is => 11
   validates_numericality_of :cpf
@@ -15,7 +17,6 @@ class Socio < ActiveRecord::Base
 
   validates_presence_of :sexo
 
-  validates_presence_of :senha
 
   validates_presence_of :permissao
 

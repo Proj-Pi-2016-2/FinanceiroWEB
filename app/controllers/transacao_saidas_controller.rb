@@ -69,6 +69,6 @@ class TransacaoSaidasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def transacao_saida_params
-      params.require(:transacao_saida).permit(:id_saida, :valor, :data_saida, :justifica_saida, :img_comprov, :created_at, :updated_at)
+      params.require(:transacao_saida).permit(:valor, :data_saida, :justifica_saida, :img_comprov, :created_at, :updated_at)
     end
 end

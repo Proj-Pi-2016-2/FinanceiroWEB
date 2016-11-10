@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(version: 20161102224351) do
   end
 
   create_table "caixas", force: :cascade do |t|
-    t.integer  "id_caixa",   limit: 4,  null: false
     t.date     "data_caixa"
     t.float    "saldo",      limit: 24
     t.datetime "created_at",            null: false
@@ -37,7 +36,6 @@ ActiveRecord::Schema.define(version: 20161102224351) do
   end
 
   create_table "mensalidades", force: :cascade do |t|
-    t.integer  "id_entrada",        limit: 4,   null: false
     t.date     "data_entrada"
     t.string   "justifica_entrada", limit: 200
     t.datetime "created_at",                    null: false
@@ -45,22 +43,21 @@ ActiveRecord::Schema.define(version: 20161102224351) do
   end
 
   create_table "socios", force: :cascade do |t|
-    t.string   "nome",           limit: 255
-    t.integer  "cpf",            limit: 8
-    t.string   "email",          limit: 255
-    t.integer  "telefone",       limit: 8
-    t.string   "endereco",       limit: 255
+    t.string   "nome",            limit: 255
+    t.integer  "cpf",             limit: 8
+    t.string   "email",           limit: 255
+    t.integer  "telefone",        limit: 8
+    t.string   "endereco",        limit: 255
     t.date     "dataNascimento"
-    t.string   "sexo",           limit: 255
-    t.integer  "cadeira",        limit: 4
-    t.string   "senha",          limit: 255
-    t.integer  "permissao",      limit: 4
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.string   "sexo",            limit: 255
+    t.integer  "cadeira",         limit: 4
+    t.string   "password_digest", limit: 255
+    t.integer  "permissao",       limit: 4
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "transacao_entradas", force: :cascade do |t|
-    t.integer  "id_entrada",        limit: 4
     t.float    "valor",             limit: 24
     t.date     "data_entrada"
     t.string   "justifica_entrada", limit: 255
@@ -70,7 +67,6 @@ ActiveRecord::Schema.define(version: 20161102224351) do
   end
 
   create_table "transacao_saidas", force: :cascade do |t|
-    t.integer  "id_saida",                 limit: 4
     t.float    "valor",                    limit: 24
     t.date     "data_saida"
     t.string   "justifica_saida",          limit: 255
