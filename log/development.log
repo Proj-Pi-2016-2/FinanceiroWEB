@@ -50822,3 +50822,80 @@ Processing by TransacaoSaidasController#new as HTML
   Rendered transacao_saidas/_form.html.erb (15.2ms)
   Rendered transacao_saidas/new.html.erb within layouts/application (16.1ms)
 Completed 200 OK in 112ms (Views: 109.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/transacao_entradas/new" for 127.0.0.1 at 2016-11-22 20:34:39 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by TransacaoEntradasController#new as HTML
+  [1m[35mSocio Load (0.4ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+  Rendered transacao_entradas/_form.html.erb (32.8ms)
+  Rendered transacao_entradas/new.html.erb within layouts/application (37.3ms)
+Completed 200 OK in 783ms (Views: 741.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/transacao_entradas" for 127.0.0.1 at 2016-11-22 20:34:41 -0200
+Processing by TransacaoEntradasController#index as HTML
+  [1m[36mSocio Load (1.3ms)[0m  [1mSELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1[0m
+  [1m[35mTransacaoEntrada Load (0.5ms)[0m  SELECT `transacao_entradas`.* FROM `transacao_entradas`
+  Rendered transacao_entradas/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 80ms (Views: 76.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/transacao_entradas/new" for 127.0.0.1 at 2016-11-22 20:34:42 -0200
+Processing by TransacaoEntradasController#new as HTML
+  [1m[36mSocio Load (0.8ms)[0m  [1mSELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1[0m
+  Rendered transacao_entradas/_form.html.erb (15.1ms)
+  Rendered transacao_entradas/new.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 111ms (Views: 106.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/transacao_entradas/new" for 127.0.0.1 at 2016-11-22 20:36:28 -0200
+Processing by TransacaoEntradasController#new as HTML
+  [1m[35mSocio Load (0.4ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+  Rendered transacao_entradas/_form.html.erb (13.1ms)
+  Rendered transacao_entradas/new.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 123ms (Views: 84.5ms | ActiveRecord: 8.0ms)
+
+
+Started POST "/transacao_entradas" for 127.0.0.1 at 2016-11-22 20:36:37 -0200
+Processing by TransacaoEntradasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wC8EW+TVyYMKid5rtbp+4Fdw5AHaNmR6+CKg9W/LDQFxHwteIpT6DREWiGfj0coULXr6SgJ9/kLrm+qIv2mwOQ==", "transacao_entrada"=>{"valor"=>"a", "data_entrada(1i)"=>"2016", "data_entrada(2i)"=>"11", "data_entrada(3i)"=>"22", "justifica_entrada"=>"", "tipo"=>"Doação", "created_at(1i)"=>"2016", "created_at(2i)"=>"11", "created_at(3i)"=>"22", "created_at(4i)"=>"22", "created_at(5i)"=>"36", "updated_at(1i)"=>"2016", "updated_at(2i)"=>"11", "updated_at(3i)"=>"22", "updated_at(4i)"=>"22", "updated_at(5i)"=>"36"}, "commit"=>"Concluir"}
+  [1m[36mSocio Load (0.5ms)[0m  [1mSELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.2ms)[0m  [1mROLLBACK[0m
+  Rendered transacao_entradas/_form.html.erb (14.4ms)
+  Rendered transacao_entradas/new.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 111ms (Views: 101.9ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/transacao_entradas" for 127.0.0.1 at 2016-11-22 20:36:48 -0200
+Processing by TransacaoEntradasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EptHN/AQeFOSg0R6GicNbXYSoHwZdkmm30a6o9R8KSijq0gyNlFL3YkcEnZMTLmZDBi+N8E9057M//DeBN6UEA==", "transacao_entrada"=>{"valor"=>"1", "data_entrada(1i)"=>"2016", "data_entrada(2i)"=>"11", "data_entrada(3i)"=>"22", "justifica_entrada"=>"", "tipo"=>"Doação", "created_at(1i)"=>"2016", "created_at(2i)"=>"11", "created_at(3i)"=>"22", "created_at(4i)"=>"22", "created_at(5i)"=>"36", "updated_at(1i)"=>"2016", "updated_at(2i)"=>"11", "updated_at(3i)"=>"22", "updated_at(4i)"=>"22", "updated_at(5i)"=>"36"}, "commit"=>"Concluir"}
+  [1m[35mSocio Load (0.6ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  Rendered transacao_entradas/_form.html.erb (14.5ms)
+  Rendered transacao_entradas/new.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 86ms (Views: 79.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/transacao_entradas" for 127.0.0.1 at 2016-11-22 20:36:52 -0200
+Processing by TransacaoEntradasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y4NyLYBT6pyaKXZVhzvkNtcQlm2F/vhmn+2voKjauAd6s30oRhLZEoG2IFnRUFDCrRqIJl21Yl6MVOXdeHgFPw==", "transacao_entrada"=>{"valor"=>"0", "data_entrada(1i)"=>"2016", "data_entrada(2i)"=>"11", "data_entrada(3i)"=>"22", "justifica_entrada"=>"", "tipo"=>"Doação", "created_at(1i)"=>"2016", "created_at(2i)"=>"11", "created_at(3i)"=>"22", "created_at(4i)"=>"22", "created_at(5i)"=>"36", "updated_at(1i)"=>"2016", "updated_at(2i)"=>"11", "updated_at(3i)"=>"22", "updated_at(4i)"=>"22", "updated_at(5i)"=>"36"}, "commit"=>"Concluir"}
+  [1m[36mSocio Load (0.7ms)[0m  [1mSELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered transacao_entradas/_form.html.erb (14.7ms)
+  Rendered transacao_entradas/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 87ms (Views: 80.6ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/transacao_entradas" for 127.0.0.1 at 2016-11-22 20:36:57 -0200
+Processing by TransacaoEntradasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3/yJWcI0Tvgi3fS/ZKffcl1NTwHff0XOTnI8ublK5RhuzIZcBHV9djlCorMyzGuGJ0dRSgc03/Zdy3bEaehYIA==", "transacao_entrada"=>{"valor"=>"0", "data_entrada(1i)"=>"2016", "data_entrada(2i)"=>"11", "data_entrada(3i)"=>"22", "justifica_entrada"=>"aasda", "tipo"=>"Doação", "created_at(1i)"=>"2016", "created_at(2i)"=>"11", "created_at(3i)"=>"22", "created_at(4i)"=>"22", "created_at(5i)"=>"36", "updated_at(1i)"=>"2016", "updated_at(2i)"=>"11", "updated_at(3i)"=>"22", "updated_at(4i)"=>"22", "updated_at(5i)"=>"36"}, "commit"=>"Concluir"}
+  [1m[35mSocio Load (1.0ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered transacao_entradas/_form.html.erb (17.4ms)
+  Rendered transacao_entradas/new.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 90ms (Views: 82.9ms | ActiveRecord: 1.5ms)
