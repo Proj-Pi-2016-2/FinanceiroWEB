@@ -29,14 +29,10 @@
         <td><%= transacao_entrada.tipo %></td>
         <td><%= transacao_entrada.created_at %></td>
         <td><%= transacao_entrada.updated_at %></td>
-        <td><%= link_to 'Exibir', transacao_entrada %></td>
+        <td><%= link_to 'Exibir', transacao_entrada%></td>
         <td><%= link_to 'Editar', edit_transacao_entrada_path(transacao_entrada) %></td>
         <td><%= link_to 'Deletar', transacao_entrada, method: :delete, data: { confirm: 'Você tem Certeza' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'Nova Transacao entrada', new_transacao_entrada_path %>
