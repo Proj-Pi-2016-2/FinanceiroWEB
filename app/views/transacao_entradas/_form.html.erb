@@ -28,14 +28,6 @@
     <%= f.label :tipo %><br>
     <%= f.select :tipo, ['Doação', 'Mensalidade', 'Outro']%>
   </div>
-  <div class="field">
-    <%= f.label :criado_em %><br>
-    <%= f.datetime_select :created_at %>
-  </div>
-  <div class="field">
-    <%= f.label :modificado_em %><br>
-    <%= f.datetime_select :updated_at%>
-  </div>
   <div class="actions">
     <%= f.submit class: 'btn btn-primary', value: 'Concluir' %>
   </div>

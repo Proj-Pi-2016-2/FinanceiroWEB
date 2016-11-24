@@ -38,7 +38,7 @@
   </head>
   <body>
 
-    
+
     <% if current_user %>
     <div class="navbar navbar-default navbar-static-top">
       <div class="container">
@@ -54,7 +54,6 @@
             <li><%= link_to "Lançamentos", "/transacao_entradas/new"  %></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <!--<li><a href="/login"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Logout</a></li>-->
             <li><% if current_user %><%= link_to 'Log Out', logout_path %>
             <% else %><%= link_to 'Log In', login_path %>
             <% end %>
@@ -69,7 +68,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-9">
-          <%= bootstrap_flash %>          
+          <%= bootstrap_flash %>
           <%= yield %>
         </div>
         <div class="col-lg-3">
