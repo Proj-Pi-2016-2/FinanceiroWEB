@@ -1,6 +1,7 @@
 class Socio < ActiveRecord::Base
   has_secure_password
-  
+  has_many :TransacaoEntrada
+
   validates_presence_of :cpf
   validates_length_of :cpf, :is => 11
   validates_numericality_of :cpf

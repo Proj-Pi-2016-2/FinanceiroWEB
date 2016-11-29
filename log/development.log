@@ -67580,3 +67580,412 @@ Processing by TransacaoEntradasController#new as HTML
   Rendered transacao_entradas/_form.html.erb (8.7ms)
   Rendered transacao_entradas/new.html.erb within layouts/application (9.7ms)
 Completed 200 OK in 86ms (Views: 83.6ms | ActiveRecord: 0.4ms)
+  [1m[36m (142.2ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (210.9ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateCadeiras (20160915102706)
+  [1m[35m (49.9ms)[0m  CREATE TABLE `cadeiras` (`id` int(11) auto_increment PRIMARY KEY, `cadeira` int(11) NOT NULL, `data_posse` date, `data_saida` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160915102706')
+  [1m[36m (31.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCadeiraSocios (20160915102722)
+  [1m[35m (66.0ms)[0m  CREATE TABLE `cadeira_socios` (`id` int(11) auto_increment PRIMARY KEY, `cpf` int(11), `cadeira` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160915102722')
+  [1m[36m (31.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCaixas (20160915102731)
+  [1m[35m (62.0ms)[0m  CREATE TABLE `caixas` (`id` int(11) auto_increment PRIMARY KEY, `data_caixa` date, `saldo` float, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160915102731')
+  [1m[36m (31.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSocios (20160928200918)
+  [1m[35m (65.8ms)[0m  CREATE TABLE `socios` (`id` int(11) auto_increment PRIMARY KEY, `nome` varchar(255), `cpf` int(11), `email` varchar(255), `telefone` int(11), `endereco` varchar(255), `dataNascimento` date, `sexo` varchar(255), `cadeira` int(11), `password_digest` varchar(255), `permissao` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160928200918')
+  [1m[36m (31.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTransacaoEntradas (20161101224807)
+  [1m[35m (65.9ms)[0m  CREATE TABLE `transacao_entradas` (`id` int(11) auto_increment PRIMARY KEY, `valor` float, `data_entrada` date, `justifica_entrada` varchar(255), `idSocio` int(11), `tipo` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161101224807')
+  [1m[36m (31.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTransacaoSaidas (20161101234553)
+  [1m[35m (67.9ms)[0m  CREATE TABLE `transacao_saidas` (`id` int(11) auto_increment PRIMARY KEY, `valor` float, `data_saida` date, `justifica_saida` varchar(255), `img_comprov_file_name` varchar(255), `img_comprov_content_type` varchar(255), `img_comprov_file_size` int(11), `img_comprov_updated_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161101234553')
+  [1m[36m (42.8ms)[0m  [1mCOMMIT[0m
+Migrating to ChangeLimitCpftoEight (20161102224351)
+  [1m[35m (210.3ms)[0m  ALTER TABLE `socios` CHANGE `cpf` `cpf` bigint DEFAULT NULL
+  [1m[36m (167.0ms)[0m  [1mALTER TABLE `cadeira_socios` CHANGE `cpf` `cpf` bigint DEFAULT NULL[0m
+  [1m[35m (167.0ms)[0m  ALTER TABLE `socios` CHANGE `telefone` `telefone` bigint DEFAULT NULL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161102224351')
+  [1m[36m (32.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'cadeira_socios'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `cadeira_socios`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'cadeiras'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `cadeiras`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'caixas'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `caixas`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'socios'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `socios`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'transacao_entradas'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `transacao_entradas`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'financeiro_development'
+  AND fk.table_name = 'transacao_saidas'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `transacao_saidas`
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSocio Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM `socios` WHERE `socios`.`cpf` = BINARY 34811558839 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `socios` (`nome`, `cpf`, `email`, `telefone`, `endereco`, `sexo`, `cadeira`, `password_digest`, `permissao`, `created_at`, `updated_at`) VALUES ('admin', 34811558839, 'admin@admin.com.br', 4499999999, 'rua avenida', 'm', 0, '$2a$10$cAIciQxUGv5meK.ZmsSbZ.otIbjiHnz214WYjOlGDAoWz0Uv8KGaO', 1, '2016-11-29 22:34:07', '2016-11-29 22:34:07')
+  [1m[36m (34.5ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/socios" for 127.0.0.1 at 2016-11-29 20:35:10 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by SociosController#index as HTML
+  [1m[35mSocio Load (0.4ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+  [1m[36mSocio Load (0.3ms)[0m  [1mSELECT `socios`.* FROM `socios`[0m
+  Rendered socios/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 977ms (Views: 881.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for 127.0.0.1 at 2016-11-29 20:35:11 -0200
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for 127.0.0.1 at 2016-11-29 20:35:11 -0200
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 127.0.0.1 at 2016-11-29 20:35:11 -0200
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-29 20:35:11 -0200
+
+
+Started GET "/assets/login.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-29 20:35:11 -0200
+
+
+Started GET "/assets/scaffolds.self-a9c357899ce8c7dfd8500f96406ce1b209c8d5877afda99545d06c8eaf5b1980.css?body=1" for 127.0.0.1 at 2016-11-29 20:35:11 -0200
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-29 20:35:11 -0200
+
+
+Started GET "/assets/socios.self-9cf6a2dbb56fde13a8648b63f36be96c11f8aa89ddc5c96ca62526f54138813c.css?body=1" for 127.0.0.1 at 2016-11-29 20:35:11 -0200
+
+
+Started GET "/assets/transacao_entradas.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-29 20:35:11 -0200
+
+
+Started GET "/assets/transacao_saidas.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-11-29 20:35:11 -0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-11-29 20:35:11 -0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-29 20:35:11 -0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-29 20:35:11 -0200
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2016-11-29 20:35:11 -0200
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2016-11-29 20:35:11 -0200
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2016-11-29 20:35:11 -0200
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2016-11-29 20:35:11 -0200
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2016-11-29 20:35:11 -0200
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2016-11-29 20:35:11 -0200
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2016-11-29 20:35:12 -0200
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2016-11-29 20:35:12 -0200
+
+
+Started GET "/assets/twitter/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2016-11-29 20:35:12 -0200
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2016-11-29 20:35:12 -0200
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2016-11-29 20:35:12 -0200
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2016-11-29 20:35:12 -0200
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-11-29 20:35:12 -0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-29 20:35:12 -0200
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for 127.0.0.1 at 2016-11-29 20:35:12 -0200
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-29 20:35:12 -0200
+
+
+Started GET "/assets/login.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-29 20:35:12 -0200
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-29 20:35:12 -0200
+
+
+Started GET "/assets/socios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-29 20:35:12 -0200
+
+
+Started GET "/assets/transacao_entradas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-29 20:35:12 -0200
+
+
+Started GET "/assets/transacao_saidas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-29 20:35:12 -0200
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-11-29 20:35:12 -0200
+
+
+Started GET "/login" for 127.0.0.1 at 2016-11-29 20:35:12 -0200
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+  [1m[35mSocio Load (0.2ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+Completed 200 OK in 206ms (Views: 204.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2016-11-29 20:35:13 -0200
+
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/golom/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/golom/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/golom/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (46.2ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (143.8ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (108.0ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (135.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2016-11-29 20:35:14 -0200
+
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/golom/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/golom/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/golom/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.7ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (52.5ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (23.8ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/golom/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (49.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2016-11-29 20:35:29 -0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Jw/CSmSqxoE94ghhRI3+3eVSxvpLv+8/p1B/kU3eh3hQwstwmea2krn5/nX9BHU1fPvsnK3q9XHlnv+R7JBNSw==", "email"=>"admin@admin.com.br", "senha"=>"admin", "commit"=>"Log In"}
+  [1m[36mSocio Load (0.4ms)[0m  [1mSELECT  `socios`.* FROM `socios` WHERE `socios`.`email` = 'admin@admin.com.br' LIMIT 1[0m
+Redirected to http://localhost:3000/socios
+Completed 302 Found in 129ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/socios" for 127.0.0.1 at 2016-11-29 20:35:29 -0200
+Processing by SociosController#index as HTML
+  [1m[35mSocio Load (0.4ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+  [1m[36mSocio Load (0.2ms)[0m  [1mSELECT `socios`.* FROM `socios`[0m
+  Rendered socios/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 74ms (Views: 71.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/transacao_entradas/new" for 127.0.0.1 at 2016-11-29 20:35:39 -0200
+Processing by TransacaoEntradasController#new as HTML
+  [1m[35mSocio Load (0.3ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+  Rendered transacao_entradas/_form.html.erb (53.7ms)
+  Rendered transacao_entradas/new.html.erb within layouts/application (55.1ms)
+Completed 200 OK in 194ms (Views: 144.9ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/transacao_entradas" for 127.0.0.1 at 2016-11-29 20:36:03 -0200
+Processing by TransacaoEntradasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J7QFgXD1L/gtCNHBq1ZIgWyE6/BOdiKyoiiXM1NH3NdQeQy7jblf66kTJ9US38Np9S3BlqgjOPzg5hcz8gkW5A==", "transacao_entrada"=>{"valor"=>"-1", "data_entrada(1i)"=>"2016", "data_entrada(2i)"=>"11", "data_entrada(3i)"=>"29", "justifica_entrada"=>"", "tipo"=>"Mensalidade"}, "commit"=>"Concluir"}
+  [1m[36mSocio Load (0.3ms)[0m  [1mSELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered transacao_entradas/_form.html.erb (11.7ms)
+  Rendered transacao_entradas/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 122ms (Views: 114.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/transacao_entradas" for 127.0.0.1 at 2016-11-29 20:36:12 -0200
+Processing by TransacaoEntradasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r+NMscEtWLeMcXQJ9o3o8T/v1w/Qtly7id+BxcroYSzYLkWLPGEopAhqgh1PBGMZpkb9aTbjRvXLEQHFa6arHw==", "transacao_entrada"=>{"valor"=>"58", "data_entrada(1i)"=>"2016", "data_entrada(2i)"=>"11", "data_entrada(3i)"=>"29", "justifica_entrada"=>"", "tipo"=>"Mensalidade"}, "commit"=>"Concluir"}
+  [1m[35mSocio Load (0.3ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  Rendered transacao_entradas/_form.html.erb (8.1ms)
+  Rendered transacao_entradas/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 111ms (Views: 103.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/transacao_entradas" for 127.0.0.1 at 2016-11-29 20:36:17 -0200
+Processing by TransacaoEntradasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZAryyQzcBXIZ6cUgaYtv5hF35AfUaunvmAzB3TAioK4Tx/vz8ZB1YZ3yMzTQAuQOiN7OYTI/86HawkHdkWxqnQ==", "transacao_entrada"=>{"valor"=>"58", "data_entrada(1i)"=>"2016", "data_entrada(2i)"=>"11", "data_entrada(3i)"=>"29", "justifica_entrada"=>"bnbnbnb", "tipo"=>"Mensalidade"}, "commit"=>"Concluir"}
+  [1m[36mSocio Load (0.2ms)[0m  [1mSELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `transacao_entradas` (`valor`, `justifica_entrada`, `tipo`, `data_entrada`, `created_at`, `updated_at`) VALUES (58.0, 'bnbnbnb', 'Mensalidade', '2016-11-29', '2016-11-29 22:36:17', '2016-11-29 22:36:17')[0m
+  [1m[35m (60.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/transacao_entradas/1
+Completed 302 Found in 68ms (ActiveRecord: 61.7ms)
+
+
+Started GET "/transacao_entradas/1" for 127.0.0.1 at 2016-11-29 20:36:17 -0200
+Processing by TransacaoEntradasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransacaoEntrada Load (0.4ms)[0m  [1mSELECT  `transacao_entradas`.* FROM `transacao_entradas` WHERE `transacao_entradas`.`id` = 1 LIMIT 1[0m
+  [1m[35mSocio Load (0.2ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+  Rendered transacao_entradas/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 76ms (Views: 73.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/transacao_entradas/new" for 127.0.0.1 at 2016-11-29 20:37:56 -0200
+Processing by TransacaoEntradasController#new as HTML
+  [1m[36mSocio Load (0.3ms)[0m  [1mSELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1[0m
+  Rendered transacao_entradas/_form.html.erb (9.1ms)
+  Rendered transacao_entradas/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 87ms (Views: 84.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/transacao_entradas" for 127.0.0.1 at 2016-11-29 20:37:57 -0200
+Processing by TransacaoEntradasController#index as HTML
+  [1m[35mSocio Load (0.3ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+  [1m[36mTransacaoEntrada Load (0.8ms)[0m  [1mSELECT `transacao_entradas`.* FROM `transacao_entradas`[0m
+  Rendered transacao_entradas/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 87ms (Views: 84.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/transacao_entradas/new" for 127.0.0.1 at 2016-11-29 20:38:20 -0200
+Processing by TransacaoEntradasController#new as HTML
+  [1m[35mSocio Load (0.2ms)[0m  SELECT  `socios`.* FROM `socios` WHERE `socios`.`id` = 1 LIMIT 1
+  Rendered transacao_entradas/_form.html.erb (7.8ms)
+  Rendered transacao_entradas/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 100ms (Views: 98.3ms | ActiveRecord: 0.2ms)

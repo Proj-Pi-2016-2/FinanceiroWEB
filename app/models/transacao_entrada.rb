@@ -1,4 +1,5 @@
 class TransacaoEntrada < ActiveRecord::Base
+belongs_to :socios
 
 validates_presence_of :valor , message: 'não pode ficar em branco'
 validates_presence_of :data_entrada , message: 'não pode ficar em branco'

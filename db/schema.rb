@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20161102224351) do
     t.float    "valor",             limit: 24
     t.date     "data_entrada"
     t.string   "justifica_entrada", limit: 255
+    t.integer  "idSocio",           limit: 4
     t.string   "tipo",              limit: 255
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
