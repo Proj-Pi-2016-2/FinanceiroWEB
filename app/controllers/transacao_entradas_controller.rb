@@ -16,6 +16,7 @@ class TransacaoEntradasController < ApplicationController
   # GET /transacao_entradas/new
   def new
     @transacao_entrada = TransacaoEntrada.new
+    @socios = Socio.all
   end
 
   # GET /transacao_entradas/1/edit
