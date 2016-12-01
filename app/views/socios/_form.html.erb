@@ -48,21 +48,13 @@
     <%= f.password_field :password %>
   </div>
   <div class="field">
-    <%= f.label :"confirmação senha" %><br>
+    <%= f.label :"confirmação senha"%><br>
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="field">
     <%= f.label :permissão %><br>
     <%= f.text_field :permissao %>
     <%#= f.select :permissao, options_for_select(['Socio','Diretor','Tesoureiro'], :selected => params[:permissao]), {}, { :class => 'span3 controls controls-row' } %>
-  </div>
-  <div class="field">
-    <%= f.label :criado_em %><br>
-    <%= f.datetime_select :created_at, start_year: 2016 %>
-  </div>
-  <div class="field">
-    <%= f.label :modificado_em %><br>
-    <%= f.datetime_select :updated_at, start_year: 2016%>
   </div>
   <div class="actions">
     <%= f.submit class: 'btn btn-primary', value: 'Concluir' %>

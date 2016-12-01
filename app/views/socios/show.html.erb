@@ -39,11 +39,6 @@
 </p>
 
 <p>
-  <strong>Senha:</strong>
-  <%= @socio.password_digest %>
-</p>
-
-<p>
   <strong>Permissao:</strong>
   <%= @socio.permissao %>
 </p>
@@ -58,5 +53,5 @@
   <%= @socio.updated_at %>
 </p>
 
-<%= link_to 'Editar', edit_socio_path(@socio) %> |
-<%= link_to 'Voltar', socios_path %>
+<%= link_to 'Editar', edit_socio_path(@socio), class: 'btn btn-primary'%> |
+<%= link_to 'Voltar', socios_path, class: 'btn btn-primary'%>
