@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
   resources :transacao_saidas
-  resources :transacao_saidas
 
   resources :transacao_entradas
+  get 'mensalidades', to: 'transacao_entradas#mensalidades', as: :mensalidades_transa
 
   resources :socios
   resources :sessions

@@ -8,6 +8,11 @@ class TransacaoEntradasController < ApplicationController
     @transacao_entradas = TransacaoEntrada.all
   end
 
+  # GET /transacao_entradas/mensalidades
+  def mensalidades
+    @transacao_entradas = TransacaoEntrada.all
+  end
+
   # GET /transacao_entradas/1
   # GET /transacao_entradas/1.json
   def show
@@ -19,7 +24,13 @@ class TransacaoEntradasController < ApplicationController
     @transacao_entrada = TransacaoEntrada.new
   end
 
-  # GET /transacao_entradas/1/edit
+  # GET /mensalidades
+  def mensalidades
+    @socios = Socio.all
+    @transacao_entrada = TransacaoEntrada.new
+  end
+
+  # GET /mensalidades/1/edit
   def edit
   end
 

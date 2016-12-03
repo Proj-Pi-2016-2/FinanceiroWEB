@@ -1,0 +1,50 @@
+<%#=<ul class="nav nav-tabs">
+  <li><a href="/transacao_entradas/new">Nova Transação Entrada</a></li>
+  <li class="active"><a href="/transacao_entradas">Exibir Transações de Entrada</a></li>
+  <li><a href="/transacao_saidas/new">Nova Transação Saida</a></li>
+  <li><a href="/transacao_saidas">Exibir Transações de Saida</a></li>
+</ul><br>%>
+
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>ID:</th>
+      <th>Socio:</th>
+      <th>Valor:</th>
+      <th>Data:</th>
+      <th>Tipo:</th>
+      <th>Criado_em:</th>
+      <th>Modificado_em:</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% id = 0 %>
+    <div class="row">
+  <div class="col-lg-4">
+    <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Buscar!</button>
+      </span>
+      <input type="text" class="form-control" placeholder="ID do Sócio...">
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row --><br>
+
+    <% TransacaoEntrada.where(tipo: "Mensalidade" ).each do |transacao_entrada| %>
+      <tr>
+        <td><%= transacao_entrada.id %></td>
+        <td><%= transacao_entrada.idSocio %></td>
+        <td><%= transacao_entrada.valor %></td>
+        <td><%= transacao_entrada.data_entrada %></td>
+        <td><%= transacao_entrada.tipo %></td>
+        <td><%= transacao_entrada.created_at %></td>
+        <td><%= transacao_entrada.updated_at %></td>
+        <td><%#= link_to 'Exibir', transacao_entrada%></td>
+        <td><%#= link_to 'Editar', edit_transacao_entrada_path(transacao_entrada) %></td>
+        <td><%#= link_to 'Deletar', transacao_entrada, method: :delete, data: { confirm: 'Você tem Certeza' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

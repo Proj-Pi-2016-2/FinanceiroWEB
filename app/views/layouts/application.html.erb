@@ -52,6 +52,7 @@
           <ul class="nav navbar-nav">
             <li><%= link_to "Sócios", "/socios"  %></li>
             <li><%= link_to "Lançamentos", "/transacao_entradas/new"  %></li>
+            <li><%= link_to "Mensalidades", mensalidades_transa_path %></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><% if current_user %><%= link_to 'Log Out', logout_path %>
