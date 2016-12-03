@@ -30,7 +30,7 @@
   </div>
     <div class="field">
       <%= f.label :Socios %><br>
-      <%= f.select :idSocio ,options_from_collection_for_select(@socios, 'id', 'nome')  %>
+      <%= f.select :idSocio ,options_from_collection_for_select(Socio.all, 'id', 'nome')  %>
     </div>
 
 
