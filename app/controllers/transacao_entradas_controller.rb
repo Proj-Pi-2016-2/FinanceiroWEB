@@ -6,6 +6,11 @@ class TransacaoEntradasController < ApplicationController
   # GET /transacao_entradas.json
   def index
     @transacao_entradas = TransacaoEntrada.all
+    if params[:search]
+      @transacao_entradas = TransacaoEntrada.search(params[:search])
+    else
+      @transacao_entradas = TransacaoEntrada.all
+    end
   end
 
   # GET /transacao_entradas/mensalidades
