@@ -40,8 +40,6 @@ GEM
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap-datepicker-rails (1.6.4.1)
-      railties (>= 3.0)
     builder (3.2.2)
     byebug (9.0.6)
     climate_control (0.0.3)
@@ -90,8 +88,6 @@ GEM
     mimemagic (0.3.2)
     mini_portile2 (2.1.0)
     minitest (5.10.1)
-    momentjs-rails (2.15.1)
-      railties (>= 3.1)
     multi_json (1.12.1)
     mysql2 (0.3.21)
     nokogiri (1.6.8.1)
@@ -181,14 +177,12 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
-  bootstrap-datepicker-rails
   byebug
   coffee-rails (~> 4.1.0)
   cpf_cnpj
   jbuilder (~> 2.0)
   jquery-rails
   less-rails (~> 2.7.1)
-  momentjs-rails (>= 2.9.0)
   mysql2 (~> 0.3.18)
   paperclip (~> 5.0.0)
   rails (= 4.2.7.1)

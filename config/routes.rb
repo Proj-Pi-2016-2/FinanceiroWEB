@@ -11,7 +11,8 @@ Rails.application.routes.draw do
   resources :sessions
   get 'home/index'
 
-  root :to => redirect("/login")
+  root :to => 'sessions#set_roots'
+  get "/find_roots" => "sessions#set_roots"
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
