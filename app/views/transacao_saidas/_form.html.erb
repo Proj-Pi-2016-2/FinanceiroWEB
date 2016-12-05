@@ -1,7 +1,7 @@
 <%= form_for(@transacao_saida) do |f| %>
   <% if @transacao_saida.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@transacao_saida.errors.count, "error") %> prohibited this transacao_saida from being saved:</h2>
+      <h2><%= pluralize(@transacao_saida.errors.count, "erro") %> encontrados:</h2>
 
       <ul>
       <% @transacao_saida.errors.full_messages.each do |message| %>
@@ -14,19 +14,19 @@
 
   <div class="field">
     <%= f.label :valor %><br>
-    <%= f.text_field :valor %>
+    <%= f.text_field :valor , class: "form-control"%>
   </div>
   <div class="field">
     <%= f.label :data_de_saida %><br>
-    <%= f.date_select :data_saida %>
+    <%= f.date_select :data_saida , class: "form-control"%>
   </div>
   <div class="field">
     <%= f.label :justificativa_de_saida %><br>
-    <%= f.text_area :justifica_saida, size: "20x6"%>
+    <%= f.text_area :justifica_saida, size: "20x6", class: "form-control"%>
   </div>
   <div class="field">
     <%= f.label :imagem_do_comprovante %><br>
-    <%= f.file_field :img_comprov %>
+    <%= f.file_field :img_comprov , class: "form-control"%>
   </div>
   <div class="actions">
     <%= f.submit class: 'btn btn-primary', value: 'Concluir' %>

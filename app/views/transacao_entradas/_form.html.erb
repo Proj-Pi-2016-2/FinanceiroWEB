@@ -1,7 +1,7 @@
 <%= form_for(@transacao_entrada) do |f| %>
   <% if @transacao_entrada.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@transacao_entrada.errors.count, "error") %> prohibited this transacao_entrada from being saved:</h2>
+      <h2><%= pluralize(@transacao_entrada.errors.count, "erro") %> encontrados:</h2>
 
       <ul>
       <% @transacao_entrada.errors.full_messages.each do |message| %>
@@ -14,7 +14,7 @@
 
   <div class="field">
     <%= f.label :valor %><br>
-    <%= f.text_field :valor%>
+    <%= f.text_field :valor, class: "form-control"%>
   </div>
   <div class="field">
     <%= f.label :data_entrada %><br>
@@ -22,7 +22,7 @@
   </div>
   <div class="field">
     <%= f.label :justificativa_de_entrada %><br>
-    <%= f.text_area :justifica_entrada, size: "20x6" %>
+    <%= f.text_area :justifica_entrada, size: "20x6" , class: "form-control"%>
   </div>
   <div class="field">
     <%= f.label :tipo %><br>

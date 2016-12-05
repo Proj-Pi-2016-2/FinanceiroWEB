@@ -1,3 +1,7 @@
+div.fieldWithErrors {
+  background-color: blue;
+}
+
 body {
   background-color: #fff;
   color: #333;
@@ -35,6 +39,7 @@ a {
 div {
   &.field, &.actions {
     margin-bottom: 10px;
+    max-width: 250px;
   }
 }
 
@@ -44,17 +49,19 @@ div {
 
 .field_with_errors {
   padding: 2px;
-  background-color: red;
+  background-color: #ff6666;
   display: table;
+  border-radius: 5px;
 }
 
 #error_explanation {
   width: 450px;
-  border: 2px solid red;
+  border: 2px solid #ff6666;
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
-  background-color: #f0f0f0;
+  background-color: #ff6666;
+  border-radius: 5px;
 
   h2 {
     text-align: left;
@@ -65,10 +72,12 @@ div {
     margin-bottom: 0px;
     background-color: #c00;
     color: #fff;
+    border-radius: 5px;
   }
 
   ul li {
     font-size: 12px;
     list-style: square;
+    margin: 5px;
   }
 }

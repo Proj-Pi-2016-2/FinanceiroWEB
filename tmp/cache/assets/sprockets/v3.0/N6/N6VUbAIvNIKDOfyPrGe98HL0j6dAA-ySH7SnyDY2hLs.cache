@@ -1,0 +1,19 @@
+I"(function() {
+  jQuery(function() {
+    $("a[rel~=popover], .has-popover").popover();
+    $("a[rel~=tooltip], .has-tooltip").tooltip();
+    $(document).on("focus", "[data-behaviour~='datepicker']", function(e) {});
+    -$(this).datepicker;
+    -({
+      format: "dd-mm-yyyy"
+    });
+    -({
+      weekStart: 1
+    });
+    return -{
+      autoclose: true
+    };
+  });
+
+}).call(this);
+:ET

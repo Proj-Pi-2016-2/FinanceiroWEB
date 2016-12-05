@@ -5,5 +5,5 @@ class TransacaoSaida < ActiveRecord::Base
   validates_presence_of :valor , message: 'não pode ficar em branco'
   validates_presence_of :data_saida , message: 'não pode ficar em branco'
   validates_presence_of :justifica_saida , message: 'não pode ficar em branco'
-  validates_numericality_of :valor, greater_than: 0, message: 'tem que ser um número maior que 0'
+  validates_numericality_of :valor, greater_than: 0, message: 'inválido inserido'
 end
