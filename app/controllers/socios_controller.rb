@@ -5,7 +5,7 @@ class SociosController < ApplicationController
   # GET /socios
   # GET /socios.json
   def index
-    @socios = Socio.all
+    @socios = Socio.all.reject {|socio| socio.id == 1}
   end
 
   # GET /socios/1

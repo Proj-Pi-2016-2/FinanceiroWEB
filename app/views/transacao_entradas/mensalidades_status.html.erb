@@ -16,7 +16,7 @@
     </thead>
 
     <tbody>
-      <% @socios.each do |socio| %>
+      <% @socios.reject {|socio| socio.id == 1}.each do |socio| %>
         <tr>
           <td><%= socio.nome %></td>
           <%-if @transacao_entrada.exists?(['idSocio = ?', "#{socio.id}"])%>
