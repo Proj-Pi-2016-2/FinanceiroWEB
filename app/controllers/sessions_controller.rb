@@ -26,7 +26,11 @@ class SessionsController < ApplicationController
      if session[:id] == 1
        redirect_to socios_path
      else
+<<<<<<< HEAD
        redirect_to "/mensalidades?utf8=Filtrar%21&search=" + session[:id].to_s
+=======
+       redirect_to "/mensalidades?utf8=✓&commit=Filtrar%21&search=" + session[:id].to_s
+>>>>>>> master
      end
    else
      redirect_to "/login"
