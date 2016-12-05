@@ -13,10 +13,6 @@ class TransacaoEntradasController < ApplicationController
     end
   end
 
-  # GET /transacao_entradas/mensalidades
-  def mensalidades
-    @transacao_entradas = TransacaoEntrada.all
-  end
 
   # GET /transacao_entradas/1
   # GET /transacao_entradas/1.json
@@ -32,7 +28,19 @@ class TransacaoEntradasController < ApplicationController
   # GET /mensalidades
   def mensalidades
     @socios = Socio.all
+    @transacao_entrada = TransacaoEntrada.where(tipo: "Mensalidade").all
+  end
+
+  # GET /mensalidades/new
+  def mensalidade_new
+    @socios = Socio.all
     @transacao_entrada = TransacaoEntrada.new
+  end
+
+  # GET /mensalidades/status
+  def mensalidades_status
+    @socios = Socio.all
+    @transacao_entrada = TransacaoEntrada.where(tipo: "Mensalidade").all
   end
 
   # GET /mensalidades/1/edit

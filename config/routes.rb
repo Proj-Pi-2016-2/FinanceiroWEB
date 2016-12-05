@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   resources :transacao_entradas
   get 'mensalidades', to: 'transacao_entradas#mensalidades', as: :mensalidades_transa
+  get 'mensalidades/new', to: 'transacao_entradas#mensalidade_new', as: :mensalidades_transa_new
+  get 'mensalidades/status', to: 'transacao_entradas#mensalidades_status', as: :mensalidades_transa_status
 
   resources :socios
   resources :sessions

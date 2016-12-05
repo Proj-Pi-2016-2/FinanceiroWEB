@@ -1,0 +1,37 @@
+<ul class="nav nav-tabs">
+  <li  class="active"><a href="/mensalidades/status">Situação dos Sócios</a></li>
+  <li><a href="/mensalidades">Mensalidades</a></li>
+  <li><a href="/mensalidades/new">Laçar Nova Mensalidade</a></li>
+</ul><br>
+
+<div class="col-md-4">
+  <h3>Mês: <%=Date.current.mon%> / Ano: <%=Date.current.year%></h3>
+
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>Socio:</th>
+        <th>Situação:</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @socios.each do |socio| %>
+        <tr>
+          <td><%= socio.nome %></td>
+          <%-if @transacao_entrada.exists?(['idSocio = ?', "#{socio.id}"])%>
+            <%@transacao_entrada.where(["idSocio = ?", socio.id]).each do |status|%>
+              <% if status.data_entrada.mon < Date.current.mon%>
+                <td  bgcolor="#ff6666">NÃO PAGO</td>
+              <% else %>
+                <td  bgcolor="#4d94ff">PAGO</td>
+              <% end %>
+            <%end%>
+          <%else%>
+            <td bgcolor="#ff6666">NÃO PAGO</td>
+          <%end%>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -26,11 +26,11 @@
   </div>
   <div class="field">
     <%= f.label :tipo %><br>
-    <%= f.select :tipo, ['Doação', 'Mensalidade', 'Outro']%>
+    <%= f.select :tipo, ['Mensalidade','Doação', 'Outro']%>
   </div>
     <div class="field">
       <%= f.label :Socios %><br>
-      <%= f.select :idSocio ,options_from_collection_for_select(Socio.all, 'id', 'nome')  %>
+      <%= f.collection_select :idSocio, Socio.all, :id, :nome, {:prompt=>true}%>
     </div>
 
   <div class="actions">
