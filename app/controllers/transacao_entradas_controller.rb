@@ -52,6 +52,8 @@ class TransacaoEntradasController < ApplicationController
   def create
     @transacao_entrada = TransacaoEntrada.new(transacao_entrada_params)
 
+    puts "DEBUG: #{params[:transacao_entrada][:idSocio]}"
+
     respond_to do |format|
       if @transacao_entrada.save
         format.html { redirect_to @transacao_entrada, notice: 'Transacao de entrada criada com sucesso.' }
@@ -95,6 +97,6 @@ class TransacaoEntradasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def transacao_entrada_params
-      params.require(:transacao_entrada).permit(:valor, :data_entrada, :justifica_entrada, :tipo, :created_at, :updated_at)
+      params.require(:transacao_entrada).permit(:valor, :data_entrada, :justifica_entrada, :tipo, :idSocio, :created_at, :updated_at)
     end
 end
