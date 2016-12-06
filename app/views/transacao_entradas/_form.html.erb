@@ -30,7 +30,7 @@
   </div>
     <div class="field">
       <%= f.label :Socios %><br>
-      <%= f.collection_select :idSocio, Socio.all.reject {|socio| socio.id == 1}, :id, :id%>
+      <%= f.collection_select :idSocio, Socio.all.reject {|socio| socio.id == 1}, :id, :nome%>
     </div>
 
   <div class="actions">
