@@ -1,1 +1,1 @@
-json.partial! "socios/socio", socio: @socio
+json.partial! "password_change", socio: @socio

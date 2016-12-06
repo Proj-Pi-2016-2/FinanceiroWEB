@@ -2,12 +2,16 @@ class SociosController < ApplicationController
   before_action :set_socio, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
+  # GET /socios/1/edit_password
+  def password_change
+    @socio = Socio.find(params[:id])
+  end
+
   # GET /socios
   # GET /socios.json
   def index
     @socios = Socio.all.reject {|socio| socio.id == 1}
   end
-
   # GET /socios/1
   # GET /socios/1.json
   def show

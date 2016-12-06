@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get 'mensalidades/status', to: 'transacao_entradas#mensalidades_status', as: :mensalidades_transa_status
 
   resources :socios
+  get 'socios/:id/edit_password', to: 'socios#password_change', as: :password_change
+
   resources :sessions
   get 'home/index'
 
